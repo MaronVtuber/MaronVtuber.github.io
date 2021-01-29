@@ -7,26 +7,54 @@
 @keyframes slide1 {
 	0% {opacity: 0;}
 	10% {opacity: 1;}
-	40% {}
-	50% {opacity: 1;}
-	60% {opacity: 0;}
+	20% {}
+	30% {opacity: 1;}
+	40% {opacity: 0;}
+	50% {}
+	60% {}
+	70% {}
+	80% {}
+	90% {}
 	100% {opacity: 0;}
 }
 /*２枚目*/
 @keyframes slide2 {
 	0% {opacity: 0;}
-	25% {opacity: 0;}
-	35% {opacity: 1;}
-	65% {}
-	75% {opacity: 1;}
-	85% {opacity: 0;}
+	10% {}
+	20% {opacity: 0;}
+	30% {opacity: 1;}
+	40% {}
+	50% {opacity: 1;}
+	60% {opacity: 0;}
+	70% {}
+	80% {}
+	90% {}
 	100% {opacity: 0;}
 }
 /*3枚目*/
 @keyframes slide3 {
 	0% {opacity: 0;}
-	50% {opacity: 0;}
-	60% {opacity: 1;}
+	10% {}
+	20% {}
+	30% {}
+	40% {opacity: 0;}
+	50% {opacity: 1;}
+	60% {}
+	70% {opacity: 1;}
+	80% {opacity: 0;}
+	90% {}
+	100% {opacity: 0;}
+}
+/*4枚目*/
+@keyframes slide4 {
+	0% {opacity: 0;}
+	10% {}
+	20% {}
+	30% {}
+	40% {}
+	50% {}
+	60% {opacity: 0;}
+	70% {opacity: 1;}
 	80% {opacity: 1;}
 	90% {opacity: 0;}
 	100% {opacity: 0;}
@@ -42,13 +70,13 @@
 	width: 100%;
 }
 /*３枚画像の共通設定*/
-.slide1,.slide2,.slide3 {
-	animation-duration: 15s;	/*実行する時間。「s」は秒の事。*/
+.slide1,.slide2,.slide3,.slide4 {
+	animation-duration: 20s;	/*実行する時間。「s」は秒の事。*/
 	animation-iteration-count:infinite;		/*実行する回数。「infinite」は無限に繰り返す意味。*/
 	position: absolute;left:0px;bottom:2px;width: 100%;height: 100%;
 	animation-fill-mode: both;
 	animation-timing-function: linear;
-	animation-delay: 2s;
+	animation-delay: 1s;
 }
 /*土台画像*/
 .slide0 {
@@ -59,16 +87,21 @@
 }
 /*１枚目*/
 .slide1 {
-	background: url(../images/1.jpg) no-repeat center center/cover;
+	background: url(../images/home/home_01.jpg) no-repeat center center/cover;
 	animation-name: slide1;		/*上で設定しているキーフレーム（keyframes）の名前*/
 }
 /*２枚目*/
 .slide2 {
-	background: url(../images/2.jpg) no-repeat center center/cover;
+	background: url(../images/home/home_02.jpg) no-repeat center center/cover;
 	animation-name: slide2;		/*上で設定しているキーフレーム（keyframes）の名前*/
 }
 /*３枚目*/
 .slide3 {
-	background: url(../images/3.jpg) no-repeat center center/cover;
+	background: url(../images/home/home_03.jpg) no-repeat center center/cover;
 	animation-name: slide3;
+}
+/*４枚目*/
+.slide4 {
+	background: url(../images/home/home_04.jpg) no-repeat center center/cover;
+	animation-name: slide4;
 }

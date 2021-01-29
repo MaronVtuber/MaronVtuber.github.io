@@ -145,7 +145,7 @@ header #logo img {
 	font-size: 90%;		/*文字サイズ*/
 	margin-bottom: 30px;	/*ブロックの下に空けるスペース*/
 }
-/*各ブロックごとの設定（サムネイルタイプへの追加指定）*/
+/*各ブロックごとの設定（thumb属性への追加指定）*/
 .list.thumb {
 	width: 23%;			/*画像幅*/
 	margin: 0 1% 30px;
@@ -153,15 +153,30 @@ header #logo img {
 	float: left;		/*画像を左に回り込み*/
 	text-align: center;
 }
+/*各ブロックごとの設定（banner属性への追加指定）*/
+.list.banner {
+	width: 35%;			/*画像幅*/
+	margin: 0 1% 30px;
+	padding-top: 1%;
+	float: right;		/*画像を右に回り込み*/
+	text-align: center;
+}
 /*画像の設定*/
 .list img {
-	border-radius: 50%;	/*円形にする指定*/
-	width: 20%;			/*画像の幅*/
+	border-radius: 10px;	/*角を丸くする指定*/
+	width: 30%;			/*画像の幅*/
 	float: left;		/*画像を左に回り込み*/
 	margin-right: 3%;	/*画像の右に空けるスペース*/
 }
 /*画像の設定（サムネイルタイプへの追加指定）*/
 .list.thumb img {
+	margin: 0;
+	float: none;
+	width: 60%;		/*画像の幅*/
+}
+/*画像の設定（サムネイルタイプへの追加指定）*/
+.list.banner img {
+	border-radius: 0px;	/*角を四角くする指定*/
 	margin: 0;
 	float: none;
 	width: 60%;		/*画像の幅*/
@@ -173,6 +188,10 @@ header #logo img {
 }
 /*マウスオン事（サムネイルタイプへの追加指定）*/
 .list.thumb a:hover img {
+	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
+}
+/*マウスオン事（banner属性への追加指定）*/
+.list.banner a:hover img {
 	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
 }
 /*h4タグ*/
