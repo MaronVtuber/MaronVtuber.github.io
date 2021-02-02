@@ -137,6 +137,18 @@ header #logo img {
 	margin-top: -10px;
 }
 
+#contents h10 {
+	margin: 20px;
+}
+#contents h11 {
+	margin: 5px;
+}
+#contents h12 {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+
 /*listブロック
 ---------------------------------------------------------------------------*/
 /*各ブロックごとの設定*/
@@ -155,11 +167,12 @@ header #logo img {
 }
 /*各ブロックごとの設定（banner属性への追加指定）*/
 .list.banner {
-	width: 35%;			/*画像幅*/
+/*	background: yellow;*/
+	width: 60%;			/*画像幅*/
 	margin: 0 1% 30px;
 	padding-top: 1%;
 	float: right;		/*画像を右に回り込み*/
-	text-align: center;
+	text-align: right;
 }
 /*画像の設定*/
 .list img {
@@ -179,7 +192,7 @@ header #logo img {
 	border-radius: 0px;	/*角を四角くする指定*/
 	margin: 0;
 	float: none;
-	width: 60%;		/*画像の幅*/
+	width: 30%;		/*画像の幅*/
 }
 /*マウスオン事*/
 .list a:hover img {
@@ -210,6 +223,34 @@ header #logo img {
 .list p {
 	padding: 0 !important;
 	line-height: 2;
+}
+.list.banner.inner{
+	padding-top: 30px;
+	display: flex;
+	justify-content: flex-end;
+}
+.list.banner.inner img {
+	width: 100%;		/*画像の幅*/
+}
+
+/*inner（等間隔に画像を並べる）
+---------------------------------------------------------------------------*/
+.inner {
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-evenly;
+  }
+.inner img {
+	border-radius: 0px;	/*角を四角くする指定*/
+	margin: 0;
+	float: none;
+	width: 100%;		/*画像の幅*/
+  }
+/*マウスオン事*/
+.inner a:hover img {
+	transition: 0.5s;
+	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
+	opacity: 0.7;	/*透明度。70%色が出た状態。*/
 }
 
 /*option1（productページのブロックの右上に斜めに配置している帯）
@@ -311,18 +352,19 @@ footer .pr {display: block;}
 /*テーブル
 ---------------------------------------------------------------------------*/
 table{
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 table th,table td{
-  padding: 10px 0;
-  text-align: center;
+  padding: 10px 10px 10px 50px;
+  text-align: left;
 }
 
 table tr:nth-child(1) th, table tr:nth-child(1) td{
   color: #eee;
+  text-align: center;
 }
 
 table tr:nth-child(odd) {
