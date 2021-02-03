@@ -73,96 +73,227 @@
 <table>
   <tr>
     <th>制作項目</th>
-    <td>選択肢</td>
-    <td>金額</td>
+    <td><h13>選択肢</h13></td>
+    <td><h13>金額</h13></td>
   </tr>
   <tr>
-    <th>アバター調整</th>
-    <td>必須 (￥10000-)</td>
-    <td>￥10000-</td>
+    <th>制作方法*</th>
+    <td><input type="radio" name="making" value="true"  onchange="UpdatePrice()" checked="checked">通常<br>
+	<input type="radio" name="making" onchange="UpdatePrice()" value="false">簡易MVパック (￥30000- 固定)</td>
+    <td><h13 id="price_1000">お尋ねください</h13></td>
   </tr>
+
+
+  <tr>
+    <th id = "simulator">アバター調整</th>
+    <td><input type="radio" name="avatar" value="10000"  onchange="UpdatePrice()" checked="checked">必須 (￥10000-)</td>
+    <td><h13 id="price_0">お尋ねください</h13></td>
+  </tr>
+
+
   <tr>
     <th>物理演算</th>
-    <td><input type="radio" name="physics" value="new"  onchange="func1()" checked="checked">新規作成 (￥5000-)<br>
-	<input type="radio" name="physics" onchange="func1()" value="existing">既存 (￥0-)</td>
-    <td><p id="price_1">￥5000-</p></td>
+    <td><input type="radio" name="physics" value="5000"  onchange="UpdatePrice()" checked="checked">新規作成 (￥5000-)<br>
+	<input type="radio" name="physics" onchange="UpdatePrice()" value="0">既存 (￥0-)</td>
+    <td><h13 id="price_1">お尋ねください</h13></td>
   </tr>
   <tr>
-    <th>身体モーション作成</th>
-    <td><input type="radio" name="motion_body" value="new" checked="checked">新規作成 (￥20000-)<br>
-	<input type="radio" name="motion_body" value="existing">既存 (￥0-)</td>
-    <td>￥5000-</td>
-  </tr>
-  <tr>
-    <th>身体モーション修正</th>
-    <td><input type="radio" name="motion_body_fix" value="necessary" checked="checked">要 *新規作成の場合必須 (￥10000-)<br>
-	<input type="radio" name="motion_body_fix" value="unnecessary">不要 (￥0-)</td>
-    <td>￥5000-</td>
+    <th>身体モーション作成・修正</th>
+    <td><input type="radio" name="motion_body" value="30000" onchange="UpdatePrice()" checked="checked">新規作成 (￥30000-)<br>
+	<input type="radio" name="motion_body" value="10000" onchange="UpdatePrice()">既存モーションの修正のみ (￥10000-)<br>
+	<input type="radio" name="motion_body" value="0" onchange="UpdatePrice()">既存モーションそのまま (￥0-)</td>
+    <td><h13 id="price_2">お尋ねください</h13></td>
   </tr>
   <tr>
     <th>指モーション作成・修正</th>
-    <td><input type="radio" name="motion_finger" value="necessary" checked="checked">要 (￥5000-)<br>
-	<input type="radio" name="motion_finger" value="unnecessary">不要 (￥0-)</td>
-    <td>￥5000-</td>
+    <td><input type="radio" name="motion_finger" value="5000" onchange="UpdatePrice()" checked="checked">要 (￥5000-)<br>
+	<input type="radio" name="motion_finger" value="0" onchange="UpdatePrice()">不要 (￥0-)</td>
+    <td><h13 id="price_4">お尋ねください</h13></td>
   </tr>
   <tr>
     <th>表情・リップモーション作成</th>
-    <td><input type="radio" name="motion_facial" value="necessary" checked="checked">要 (￥10000-)<br>
-	<input type="radio" name="motion_facial" value="unnecessary">不要 (￥0-)</td>
-    <td>￥5000-</td>
+    <td><input type="radio" name="motion_facial" value="10000" onchange="UpdatePrice()" checked="checked">要 (￥10000-)<br>
+	<input type="radio" name="motion_facial" value="0" onchange="UpdatePrice()">不要 (￥0-)</td>
+    <td><h13 id="price_5">お尋ねください</h13></td>
   </tr>
   <tr>
-    <th>ビジュアル調整*</th>
-    <td><input type="radio" name="visual" value="hdrp" checked="checked">HDRP (￥20000-)<br>
-	<input type="radio" name="visual" value="srp">SRP (￥0-)</td>
-    <td>￥5000-</td>
+    <th>ビジュアル調整**</th>
+    <td><input type="radio" name="visual" value="20000" onchange="UpdatePrice()">HDRP (￥20000-)<br>
+	<input type="radio" name="visual" value="0" onchange="UpdatePrice()" checked="checked">SRP (￥0-)</td>
+    <td><h13 id="price_6">お尋ねください</h13></td>
   </tr>
   <tr>
-    <th>歌詞入れ**</th>
-    <td><input type="radio" name="lyrics" value="3d" checked="checked">3Dタイポグラフィ (￥20000-)<br>
-	<input type="radio" name="lyrics" value="2d">簡易2D (￥10000-)<br>
-	<input type="radio" name="lyrics" value="none">なし (￥0-)</td>
-    <td>￥5000-</td>
+    <th>歌詞入れ***</th>
+    <td><input type="radio" name="lyrics" value="20000" onchange="UpdatePrice()">3Dタイポグラフィ (￥20000-)<br>
+	<input type="radio" name="lyrics" value="10000" onchange="UpdatePrice()">簡易2D (￥10000-)<br>
+	<input type="radio" name="lyrics" value="0" onchange="UpdatePrice()" checked="checked">なし (￥0-)</td>
+    <td><h13 id="price_7">お尋ねください</h13></td>
   </tr>
   <tr>
     <th>カメラワーク</th>
-    <td><input type="radio" name="motion_camera" value="necessary" checked="checked">要 (￥20000-)<br>
-	<input type="radio" name="motion_camera" value="unnecessary">不要 *360度動画やVRライブ作成の場合など (￥0-)</td>
-    <td>￥5000-</td>
+    <td><input type="radio" name="motion_camera" value="20000" onchange="UpdatePrice()" checked="checked">要 (￥20000-)<br>
+	<input type="radio" name="motion_camera" value="0" onchange="UpdatePrice()">不要 (￥0-) *360度動画やVRライブ作成の場合など</td>
+    <td><h13 id="price_8">お尋ねください</h13></td>
   </tr>
+
+
   <tr>
     <th>見積り金額</th>
     <td></td>
-    <td>￥50000-</td>
+    <td><h13 id="price_sum">お尋ねください</h13></td>
   </tr>
 </table>
 </div>
+<br>
+
+
 
 <script language="javascript" type="text/javascript">
-  function func1() {
-    var price1 = document.getElementsByName("physics");
-    var value = document.getElementById("price_1");
-    for(var i = 0; i < price1.length; i++){
-      if(price1[i].checked) {
-        value.innerHTML = price1[i].value;
+  function UpdatePrice() {
+  /*制作方式*/
+    var making = document.getElementsByName("making");
+    var price_1000 = document.getElementById("price_1000");
+    for(var i = 0; i < making.length; i++){
+      if(making[i].checked) {
+	      if(making[i].value == "true") {
+				price_1000.innerHTML = "-----";
+		  }else{
+				price_1000.innerHTML = "￥30000-";	  
+		  }
       }
     }
+
+  /*アバター調整*/
+    var avatar = document.getElementsByName("avatar");
+    var price_0 = document.getElementById("price_0");
+    for(var i = 0; i < avatar.length; i++){
+      if(avatar[i].checked) {
+        price_0.innerHTML = "￥" + avatar[i].value + "-";
+      }
+    }
+
+  /*物理演算*/
+    var physics = document.getElementsByName("physics");
+    var price_1 = document.getElementById("price_1");
+    for(var i = 0; i < physics.length; i++){
+      if(physics[i].checked) {
+        price_1.innerHTML = "￥" + physics[i].value + "-";
+      }
+    }
+
+  /*身体モーション作成・修正*/
+    var motion_body = document.getElementsByName("motion_body");
+    var price_2 = document.getElementById("price_2");
+    for(var i = 0; i < motion_body.length; i++){
+      if(motion_body[i].checked) {
+        price_2.innerHTML = "￥" + motion_body[i].value + "-";
+      }
+    }
+
+  /*身体モーション修正 (身体モーション作成と統合しました)
+    var motion_body_fix = document.getElementsByName("motion_body_fix");
+    var price_3 = document.getElementById("price_3");
+    for(var i = 0; i < motion_body_fix.length; i++){
+      if(motion_body_fix[i].checked) {
+        price_3.innerHTML = "￥" + motion_body_fix[i].value + "-";
+      }
+    }*/
+
+  /*指モーション作成・修正*/
+    var motion_finger = document.getElementsByName("motion_finger");
+    var price_4 = document.getElementById("price_4");
+    for(var i = 0; i < motion_finger.length; i++){
+      if(motion_finger[i].checked) {
+        price_4.innerHTML = "￥" + motion_finger[i].value + "-";
+      }
+    }
+
+  /*表情・リップモーション作成*/
+    var motion_facial = document.getElementsByName("motion_facial");
+    var price_5 = document.getElementById("price_5");
+    for(var i = 0; i < motion_facial.length; i++){
+      if(motion_facial[i].checked) {
+        price_5.innerHTML = "￥" + motion_facial[i].value + "-";
+      }
+    }
+
+  /*ビジュアル調整*/
+    var visual = document.getElementsByName("visual");
+    var price_6 = document.getElementById("price_6");
+    for(var i = 0; i < visual.length; i++){
+      if(visual[i].checked) {
+        price_6.innerHTML = "￥" + visual[i].value + "-";
+      }
+    }
+
+  /*歌詞入れ*/
+    var lyrics = document.getElementsByName("lyrics");
+    var price_7 = document.getElementById("price_7");
+    for(var i = 0; i < lyrics.length; i++){
+      if(lyrics[i].checked) {
+        price_7.innerHTML = "￥" + lyrics[i].value + "-";
+      }
+    }
+
+  /*カメラワーク*/
+    var motion_camera = document.getElementsByName("motion_camera");
+    var price_8 = document.getElementById("price_8");
+    for(var i = 0; i < motion_camera.length; i++){
+      if(motion_camera[i].checked) {
+        price_8.innerHTML = "￥" + motion_camera[i].value + "-";
+      }
+    }
+
+  /*見積り合計*/
+    var price_sum = document.getElementById("price_sum");
+	var sum = parseInt(price_0.innerHTML.replace("￥", ""))
+			+ parseInt(price_1.innerHTML.replace("￥", ""))
+			+ parseInt(price_2.innerHTML.replace("￥", ""))
+		/*  + parseInt(price_3.innerHTML.replace("￥", ""))  身体モーション作成(price_2)と統合したので不要 */
+			+ parseInt(price_4.innerHTML.replace("￥", ""))
+			+ parseInt(price_5.innerHTML.replace("￥", ""))
+			+ parseInt(price_6.innerHTML.replace("￥", ""))
+			+ parseInt(price_7.innerHTML.replace("￥", ""))
+			+ parseInt(price_8.innerHTML.replace("￥", ""));
+	if(price_1000.innerHTML == "-----"){
+	    price_sum.innerHTML = "￥" + String(sum) + "-";
+	}else{
+	    price_sum.innerHTML = "￥30000-";
+	}
+
+  /*簡易MVパックの場合に不要な行の色を変える/元に戻す*/
+	var simulator = document.getElementById("simulator");
+	if(price_1000.innerHTML == "-----"){
+		simulator.classList.remove("disable");
+	}else{
+		simulator.classList.add("disable");
+	}
   }
-  func1();
+  UpdatePrice();
   </script>
 
 <br>
 <br>
 
+
 <div class="list">
-<h4><strong class="color1"><font size = "5">*ビジュアル調整</font></strong>　HDRPとSRPの2種類の質感を選べます。HDRPの方がより高度なレンダリングです。(クリックで拡大)</h4>
+<h4><strong class="color1"><font size = "5">*簡易MVパック</font></strong>　身体モーションやカメラワークが作成済みのため、納品が早く料金も安いプランです。<br>
+依頼ごとに多少アレンジはしますが、複数のマイナーチェンジのMVが世の中に存在することになります。(吉と取るか凶と取るかは貴方次第)</h4>
 <div class="inner">
 <h12><a href="product2.html"><img src="images/home/home_thumbnail_02.png" alt=""></a></h12>
 <h12><a href="product2.html"><img src="images/home/home_thumbnail_02.png" alt=""></a></h12>
 </div>
 <br>
 <br>
-<h4><strong class="color1"><font size = "5">**歌詞入れ</font></strong>　3Dタイポグラフィでは3Dの文字が動きます。簡易2Dでは画面下に歌詞を表示します。(クリックで拡大)</h4>
+<div class="list">
+<h4><strong class="color1"><font size = "5">**ビジュアル調整</font></strong>　HDRPとSRPの2種類の質感を選べます。HDRPの方がより高度なレンダリングです。(クリックで拡大)</h4>
+<div class="inner">
+<h12><a href="product2.html"><img src="images/home/home_thumbnail_02.png" alt=""></a></h12>
+<h12><a href="product2.html"><img src="images/home/home_thumbnail_02.png" alt=""></a></h12>
+</div>
+<br>
+<br>
+<h4><strong class="color1"><font size = "5">***歌詞入れ</font></strong>　3Dタイポグラフィでは3Dの文字が動きます。簡易2Dでは画面下に歌詞を表示します。(クリックで拡大)</h4>
 <div class="inner">
 <h12><a href="product2.html"><img src="images/home/home_thumbnail_02.png" alt=""></a></h12>
 <h12><a href="product2.html"><img src="images/home/home_thumbnail_02.png" alt=""></a></h12>

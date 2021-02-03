@@ -147,6 +147,10 @@ header #logo img {
 	margin-left: 20px;
 	margin-right: 20px;
 }
+#contents h13 {
+	margin-right: 50px;
+	text-align: center
+}
 
 
 /*listブロック
@@ -358,8 +362,9 @@ table{
 }
 
 table th,table td{
-  padding: 10px 10px 10px 50px;
+  padding: 0px 0px 10px 50px;
   text-align: left;
+  font-size: 20px;
 }
 
 table tr:nth-child(1) th, table tr:nth-child(1) td{
@@ -367,13 +372,40 @@ table tr:nth-child(1) th, table tr:nth-child(1) td{
   text-align: center;
 }
 
+table tr:last-child th{
+  color: #eee;
+  text-align: center;
+}
+
+table tr:last-child td{
+  color: #eee;
+  text-align: left;
+}
+
 table tr:nth-child(odd) {
   background-color: #eee
+}
+
+table tr:nth-child(even) {
+  background-color: #fff
+}
+
+table tr:nth-child(odd) .disable {
+  background-color: #ccc
+}
+
+table tr:nth-child(even) .disable{
+  background-color: #ccc
 }
 
 table tr:nth-child(1){
   background-color: #555
 }
+
+table tr:last-child{
+  background-color: #555
+}
+
 
 
 
