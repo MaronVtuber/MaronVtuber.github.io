@@ -390,12 +390,8 @@ table tr:nth-child(even) {
   background-color: #fff
 }
 
-table tr:nth-child(odd) .disable {
-  background-color: #ccc
-}
-
-table tr:nth-child(even) .disable{
-  background-color: #ccc
+table tr .disable {
+  background-color: #777
 }
 
 table tr:nth-child(1){
@@ -406,6 +402,18 @@ table tr:last-child{
   background-color: #555
 }
 
+.gallery table{
+  width: 60%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.gallery table th, .gallery table td{
+  padding: 0px 0px 10px 50px;
+  text-align: left;
+  font-size: 20px;
+  background-color: white;
+}
 
 
 
