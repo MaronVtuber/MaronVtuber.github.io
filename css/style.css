@@ -170,7 +170,15 @@ header #logo img {
 	text-align: center;
 }
 /*各ブロックごとの設定（banner属性への追加指定）*/
-.list.banner {
+.list.banner{
+/*	background: yellow;*/
+	width: 60%;			/*画像幅*/
+	margin: 0 1% 30px;
+	padding-top: 1%;
+	float: right;		/*画像を右に回り込み*/
+	text-align: right;
+}
+.list.link{
 /*	background: yellow;*/
 	width: 60%;			/*画像幅*/
 	margin: 0 1% 30px;
@@ -198,6 +206,12 @@ header #logo img {
 	float: none;
 	width: 30%;		/*画像の幅*/
 }
+.list.link img {
+	border-radius: 0px;	/*角を四角くする指定*/
+	margin: 0;
+	float: none;
+	width: 45%;		/*画像の幅*/
+}
 /*マウスオン事*/
 .list a:hover img {
 	transition: 0.5s;
@@ -209,6 +223,10 @@ header #logo img {
 }
 /*マウスオン事（banner属性への追加指定）*/
 .list.banner a:hover img {
+	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
+}
+/*マウスオン事（banner属性への追加指定）*/
+.list.link a:hover img {
 	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
 }
 /*largeタグ*/
@@ -252,6 +270,24 @@ header #logo img {
   }
 /*マウスオン事*/
 .inner a:hover img {
+	transition: 0.5s;
+	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
+	opacity: 0.7;	/*透明度。70%色が出た状態。*/
+}
+
+/*galleryinner（等間隔に画像を並べる）
+---------------------------------------------------------------------------*/
+.galleryinner {
+	display: flex;
+	justify-content: space-evenly;
+  }
+.galleryinner img {
+	border-radius: 5px;	/*角を四角くする指定*/
+	margin: 10px 100px 0px 50px;
+	float: none;
+  }
+/*マウスオン事*/
+.galleryinner a:hover img {
 	transition: 0.5s;
 	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
 	opacity: 0.7;	/*透明度。70%色が出た状態。*/
@@ -403,14 +439,16 @@ table tr:last-child{
 }
 
 .gallery table{
-  width: 60%;
+  width: 70%;
   border-collapse: collapse;
   border-spacing: 0;
 }
+.gallery img{
+  background-color: yellow;
+}
 
 .gallery table th, .gallery table td{
-  padding: 0px 0px 10px 50px;
-  text-align: left;
+  text-align: center;
   font-size: 20px;
   background-color: white;
 }
