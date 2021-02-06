@@ -231,7 +231,7 @@ header #logo img {
 }
 /*largeタグ*/
 .list large {
-	font-size: 170%;	/*文字サイズ*/
+	font-size: 140%;	/*文字サイズ*/
 }
 /*h4タグ*/
 .list h4 {
@@ -248,11 +248,12 @@ header #logo img {
 }
 .list.banner.inner{
 	padding-top: 30px;
+	padding-bottom: 30px;
 	display: flex;
 	justify-content: flex-end;
 }
 .list.banner.inner img {
-	width: 100%;		/*画像の幅*/
+	width: 200px;		/*画像の幅*/
 }
 
 /*inner（等間隔に画像を並べる）
@@ -444,7 +445,7 @@ table tr:last-child{
   border-spacing: 0;
 }
 .gallery img{
-  background-color: yellow;
+  /*background-color: yellow;*/
 }
 
 .gallery table th, .gallery table td{
