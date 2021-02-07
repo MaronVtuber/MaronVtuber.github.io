@@ -593,39 +593,6 @@ header #logo img {
 }
 
 }
-#contents h10 {
-	margin: 2px;
-}
-#contents h13 {
-	margin-right: 0px;
-	text-align: center
-}
-.inner {
-	padding-top: 0px;
-	display: flex;
-	justify-content: space-evenly;
-  }
-.inner img {
-	border-radius: 0px;	/*角を四角くする指定*/
-	margin: 0;
-	float: none;
-	width: 100%;		/*画像の幅*/
-  }
-
-/*画像の設定（サムネイルタイプへの追加指定）*/
-.list.banner img {
-	border-radius: 0px;	/*角を四角くする指定*/
-	margin: 0;
-	float: none;
-	width: 100%;		/*画像の幅*/
-}
-.list.banner.inner{
-	display: flex;
-	justify-content: flex-end;
-}
-.list.banner.inner img {
-	width: 200px;		/*画像の幅*/
-}
 
 
 
