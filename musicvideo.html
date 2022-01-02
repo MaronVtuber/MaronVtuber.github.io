@@ -1,331 +1,374 @@
 <!DOCTYPE html>
-<html lang="ja">
+
+<!--日本語ページという明示、OGPを使う宣言-->
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>MV制作 八ツ橋まろん のホームページ</title>
-<link rel="shortcut icon" href="images/favicon.png" >
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="八ツ橋まろんのホームページへようこそ。映像制作依頼やモーションキャプチャ用のソフトを配布中！！">
-<meta name="keywords" content="八ツ橋まろん,八つ橋まろん,八ッ橋まろん,八ツ橋マロン,八つ橋マロン,八ッ橋マロン,ミュージックビデオ,Vtuber, 歌ってみた, 踊ってみた, 3DVtuber">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/fixmenu_pagetop.js"></script>
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!--エンコードの指定-->
+    <meta charset="UTF-8">
+
+    <!--ページのタイトル-->
+    <title>八ツ橋まろん のホームページ</title>
+
+    <!--検索エンジンで表示される説明の指定-->
+    <meta name="description" content="八ツ橋まろんのホームページへようこそ。映像制作依頼やモーションキャプチャ用のソフトを配布中！！">
+
+    <!--検索キーワード、Googleでは無視されるのであんまり意味ない-->
+    <meta name="keywords" content="八ツ橋まろん,八つ橋まろん,八ッ橋まろん,八ツ橋マロン,八つ橋マロン,八ッ橋マロン,ミュージックビデオ,Vtuber, 歌ってみた, 踊ってみた, 3DVtuber">
+
+    <!--faviconの指定-->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+    <!--使用するcssとjsの指定-->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/fixmenu_pagetop.js"></script>
+
+    <!--OGPの設定-->
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="八ツ橋まろんのホームページ" />
+    <meta property="og:site_name" content="八ツ橋まろんのホームページ" />
+    <meta property="og:description" content="MV制作依頼やモーションキャプチャ用のソフト、設定画&フォトページもあるよ！！" />
+    <meta property="og:image" content="https://maronvtuber.github.io/images/photo_sd_mini.png" />
+    <meta property="fb:app_id" />
+
+    <!--viewportの設定-->
+    <meta name="viewport" content="width=device-width; initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link media="only screen and (max-device-width:480px)" href="style_mobile.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
+    <!--///////////////////-->
+    <!--        本文        -->
+    <!--///////////////////-->
+    <!--サイト背景-->
+    <div id="container">
 
-<div id="container">
+        <!--//////////////////////////////////////////////////////-->
+        <!--ロゴ表示のエリア-->
+        <!--//////////////////////////////////////////////////////-->
+        <header>
+            <h1 id="logo"><img src="images/logo_mini.png" alt="八ツ橋まろん"></h1>
+        </header>
 
-<header>
-<h1 id="logo"><img src="images/logo_mini.png" alt="八ツ橋まろん"></h1>
-</header>
+        <!--//////////////////////////////////////////////////////-->
+        <!--メニューのエリア【ホーム/MV制作/ギャラリー/お問い合わせ】-->
+        <!--//////////////////////////////////////////////////////-->
+        <nav id="menubar">
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li class="current"><a href="musicvideo.html">MV制作</a></li>
+                <li><a href="gallery.html">ギャラリー</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4XWqlc9V-LBvRst-fV_m2k9nwuwsO36QK4DZbRXKU624UvQ/viewform" target="_blank" rel="noopener noreferrer">お問い合わせ (Googleフォーム)</a></li>
+            </ul>
+        </nav>
 
-<nav id="menubar">
-<ul>
-<li><a href="index.html">ホーム</a></li>
-<li class="current"><a href="musicvideo.html">MV制作</a></li>
-<!--<li><a href="motioncapture.html">モーションキャプチャ</a></li>-->
-<li><a href="gallery.html">ギャラリー</a></li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4XWqlc9V-LBvRst-fV_m2k9nwuwsO36QK4DZbRXKU624UvQ/viewform" target="_blank" rel="noopener noreferrer">お問い合わせ (Googleフォーム)</a></li>
-</ul>
-</nav>
+        <!--//////////////////////////////////////////////////////-->
+        <!--概要説明のエリア【MV制作】-->
+        <!--//////////////////////////////////////////////////////-->
+        <div id="contents">
+            <h2><span>MV制作</span></h2>
+            <section class="whiteblock">
+                <section class="musicvideo_introduction">
+                    <img src="images/photo_sd_mini.png" alt=""><br>
+                    3Dモデルを使ったミュージックビデオ映像を制作します。<br>
+                    制作にはUnityを使用します。MMD専用のモデルやエフェクトなどは扱えませんのであしからず。<br>
+                    制作期間は内容によりますが2～3ヶ月程度となります。お手軽MVパックで依頼された場合は2週間～1ヶ月程度です。<br>
+                    金額は下の料金シミュレータで概算できます。 (多少上下することがあります)
+                    <div class="musicvideo_introduction banner">
+                        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4XWqlc9V-LBvRst-fV_m2k9nwuwsO36QK4DZbRXKU624UvQ/viewform" target="_blank" rel="noopener noreferrer"><img src="images/banner/link_otoiawase.png" alt=""></a></p>
+                    </div>
+                </section>
+            </section>
+        </div>
 
-<div id="contents">
+        <!--//////////////////////////////////////////////////////-->
+        <!--制作例のエリア-->
+        <!--//////////////////////////////////////////////////////-->
+        <div id="contents">
+            <h2><span>制作例</span></h2>
+            <section class="whiteblock">
+                <section class="mvexample">
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/82pU90e819Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/KQM4dfOg8uE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    ※『気まぐれメルシィ』は<a href="https://twitter.com/Reimhak" target="_blank" rel="noopener noreferrer">Reimhak様</a>との共同制作です<br><br>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/4nRfReK7RI8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+                    ※『We sing the world』は<a href="https://twitter.com/marumotions" target="_blank" rel="noopener noreferrer">オニマル様</a>との共同制作です<br><br>
+                </section>
+            </section>
+        </div>
 
-<section class="box1">
-
-<h2><span>MV制作</span></h2>
-
-<div class="list">
-<img src="images/photo_sd_mini.png" alt="">
-<h4>
-3Dモデルを使ったミュージックビデオ映像を制作します。<br>
-制作にはUnityを使用します。MMD専用のモデルやエフェクトなどは扱えませんのであしからず。<br>
-制作期間は内容によりますが2～3ヶ月程度となります。お手軽MVパックで依頼された場合は2週間～1ヶ月程度です。<br>
-金額は下の料金シミュレータで概算できます。 (多少上下することがあります)
-</h4>
-<br>
-<br>
-<div class="list banner">
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4XWqlc9V-LBvRst-fV_m2k9nwuwsO36QK4DZbRXKU624UvQ/viewform" target="_blank" rel="noopener noreferrer"><img src="images/banner/link_otoiawase.png" alt=""></a></p>
-</div>
-</div>
-
-
-
-<h2><span>制作例</span></h2>
-<div class="inner">
-<iframe width="480" height="270" src="https://www.youtube.com/embed/82pU90e819Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h11></h11>
-<iframe width="480" height="270" src="https://www.youtube.com/embed/KQM4dfOg8uE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h11></h11>
-<iframe width="480" height="270" src="https://www.youtube.com/embed/4nRfReK7RI8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<h4>※『気まぐれメルシィ』は<a href="https://twitter.com/Reimhak" target="_blank" rel="noopener noreferrer">Reimhak様</a>との共同制作です</h4>
-<h4>※『We sing the world』は<a href="https://twitter.com/marumotions" target="_blank" rel="noopener noreferrer">オニマル様</a>との共同制作です</h4>
-<br>
-<br>
-
-<h2><span>料金シミュレータ</span></h2>
-<div class="inner">
-<table>
-  <tr>
-    <th>制作項目</th>
-    <td><h13>選択肢</h13></td>
-    <td><h13>金額</h13></td>
-  </tr>
-  <tr>
-    <th>制作方法*</th>
-    <td><input type="radio" name="making" value="true"  onchange="UpdatePrice()" checked="checked">通常<br>
-	<input type="radio" name="making" onchange="UpdatePrice()" value="false">お手軽MVパック (￥30000- 固定)</td>
-    <td><h13 id="price_1000">お尋ねください</h13></td>
-  </tr>
-
-
-  <tr>
-    <th name= "colorFlag">アバター調整</th>
-    <td name= "colorFlag"><input type="radio" name="avatar" value="10000"  onchange="UpdatePrice()" checked="checked">必須 (￥10000-)</td>
-    <td name= "colorFlag"><h13 id="price_0">お尋ねください</h13></td>
-  </tr>
-
-
-  <tr>
-    <th name= "colorFlag">スカートなど物理演算</th>
-    <td name= "colorFlag"><input type="radio" name="physics" value="5000"  onchange="UpdatePrice()" checked="checked">新規作成 (￥5000-)<br>
-	<input type="radio" name="physics" onchange="UpdatePrice()" value="0">既存 (￥0-)</td>
-    <td name= "colorFlag"><h13 id="price_1">お尋ねください</h13></td>
-  </tr>
-  <tr>
-    <th name= "colorFlag">身体モーション作成・修正</th>
-    <td name= "colorFlag"><input type="radio" name="motion_body" value="30000" onchange="UpdatePrice()" checked="checked">新規作成 (￥30000-)<br>
-	<input type="radio" name="motion_body" value="10000" onchange="UpdatePrice()">既存モーションの修正のみ (￥10000-)<br>
-	<input type="radio" name="motion_body" value="0" onchange="UpdatePrice()">既存モーションそのまま (￥0-)</td>
-    <td name= "colorFlag"><h13 id="price_2">お尋ねください</h13></td>
-  </tr>
-  <tr>
-    <th name= "colorFlag">指モーション作成・修正</th>
-    <td name= "colorFlag"><input type="radio" name="motion_finger" value="5000" onchange="UpdatePrice()" checked="checked">要 (￥5000-)<br>
-	<input type="radio" name="motion_finger" value="0" onchange="UpdatePrice()">不要 (￥0-)</td>
-    <td name= "colorFlag"><h13 id="price_4">お尋ねください</h13></td>
-  </tr>
-  <tr>
-    <th name= "colorFlag">表情・リップモーション作成</th>
-    <td name= "colorFlag"><input type="radio" name="motion_facial" value="10000" onchange="UpdatePrice()" checked="checked">要 (￥10000-)<br>
-	<input type="radio" name="motion_facial" value="0" onchange="UpdatePrice()">不要 (￥0-)</td>
-    <td name= "colorFlag"><h13 id="price_5">お尋ねください</h13></td>
-  </tr>
-  <tr>
-    <th name= "colorFlag">ビジュアル調整**</th>
-    <td name= "colorFlag"><input type="radio" name="visual" value="20000" onchange="UpdatePrice()">HDRP (￥20000-)<br>
-	<input type="radio" name="visual" value="0" onchange="UpdatePrice()" checked="checked">Built-in (￥0-)</td>
-    <td name= "colorFlag"><h13 id="price_6">お尋ねください</h13></td>
-  </tr>
-  <tr>
-    <th name= "colorFlag">歌詞入れ***</th>
-    <td name= "colorFlag"><input type="radio" name="lyrics" value="20000" onchange="UpdatePrice()">3Dタイポグラフィ (￥20000-)<br>
-	<input type="radio" name="lyrics" value="10000" onchange="UpdatePrice()">簡易2D (￥10000-)<br>
-	<input type="radio" name="lyrics" value="0" onchange="UpdatePrice()" checked="checked">なし (￥0-)</td>
-    <td name= "colorFlag"><h13 id="price_7">お尋ねください</h13></td>
-  </tr>
-  <tr>
-    <th name= "colorFlag">カメラワーク</th>
-    <td name= "colorFlag"><input type="radio" name="motion_camera" value="20000" onchange="UpdatePrice()" checked="checked">要 (￥20000-)<br>
-	<input type="radio" name="motion_camera" value="0" onchange="UpdatePrice()">不要 (￥0-) *360度動画やVRライブ作成の場合など</td>
-    <td name= "colorFlag"><h13 id="price_8">お尋ねください</h13></td>
-  </tr>
+        <!--//////////////////////////////////////////////////////-->
+        <!--シミュレータのエリア-->
+        <!--//////////////////////////////////////////////////////-->
+        <div id="contents">
+            <section class="whiteblock">
+                <h2><span>料金シミュレータ</span></h2>
+                <div class="inner">
+                    <table>
+                        <tr>
+                            <th>制作項目</th>
+                            <td><h13>選択肢</h13></td>
+                            <td><h13>金額</h13></td>
+                        </tr>
+                        <tr>
+                            <th>制作方法*</th>
+                            <td>
+                                <input type="radio" name="making" value="true" onchange="UpdatePrice()" checked="checked">通常<br>
+                                <input type="radio" name="making" onchange="UpdatePrice()" value="false">お手軽MVパック (￥30000- 固定)
+                            </td>
+                            <td><h13 id="price_1000">お尋ねください</h13></td>
+                        </tr>
 
 
-  <tr>
-    <th>見積り金額</th>
-    <td></td>
-    <td><h13 id="price_sum">お尋ねください</h13></td>
-  </tr>
-</table>
-</div>
-<br>
+                        <tr>
+                            <th name="colorFlag">アバター調整</th>
+                            <td name="colorFlag"><input type="radio" name="avatar" value="10000" onchange="UpdatePrice()" checked="checked">必須 (￥10000-)</td>
+                            <td name="colorFlag"><h13 id="price_0">お尋ねください</h13></td>
+                        </tr>
+
+
+                        <tr>
+                            <th name="colorFlag">スカートなど物理演算</th>
+                            <td name="colorFlag">
+                                <input type="radio" name="physics" value="5000" onchange="UpdatePrice()" checked="checked">新規作成 (￥5000-)<br>
+                                <input type="radio" name="physics" onchange="UpdatePrice()" value="0">既存 (￥0-)
+                            </td>
+                            <td name="colorFlag"><h13 id="price_1">お尋ねください</h13></td>
+                        </tr>
+                        <tr>
+                            <th name="colorFlag">身体モーション作成・修正</th>
+                            <td name="colorFlag">
+                                <input type="radio" name="motion_body" value="30000" onchange="UpdatePrice()" checked="checked">新規作成 (￥30000-)<br>
+                                <input type="radio" name="motion_body" value="10000" onchange="UpdatePrice()">既存モーションの修正のみ (￥10000-)<br>
+                                <input type="radio" name="motion_body" value="0" onchange="UpdatePrice()">既存モーションそのまま (￥0-)
+                            </td>
+                            <td name="colorFlag"><h13 id="price_2">お尋ねください</h13></td>
+                        </tr>
+                        <tr>
+                            <th name="colorFlag">指モーション作成・修正</th>
+                            <td name="colorFlag">
+                                <input type="radio" name="motion_finger" value="5000" onchange="UpdatePrice()" checked="checked">要 (￥5000-)<br>
+                                <input type="radio" name="motion_finger" value="0" onchange="UpdatePrice()">不要 (￥0-)
+                            </td>
+                            <td name="colorFlag"><h13 id="price_4">お尋ねください</h13></td>
+                        </tr>
+                        <tr>
+                            <th name="colorFlag">表情・リップモーション作成</th>
+                            <td name="colorFlag">
+                                <input type="radio" name="motion_facial" value="10000" onchange="UpdatePrice()" checked="checked">要 (￥10000-)<br>
+                                <input type="radio" name="motion_facial" value="0" onchange="UpdatePrice()">不要 (￥0-)
+                            </td>
+                            <td name="colorFlag"><h13 id="price_5">お尋ねください</h13></td>
+                        </tr>
+                        <tr>
+                            <th name="colorFlag">ビジュアル調整**</th>
+                            <td name="colorFlag">
+                                <input type="radio" name="visual" value="20000" onchange="UpdatePrice()">HDRP (￥20000-)<br>
+                                <input type="radio" name="visual" value="0" onchange="UpdatePrice()" checked="checked">Built-in (￥0-)
+                            </td>
+                            <td name="colorFlag"><h13 id="price_6">お尋ねください</h13></td>
+                        </tr>
+                        <tr>
+                            <th name="colorFlag">歌詞入れ***</th>
+                            <td name="colorFlag">
+                                <input type="radio" name="lyrics" value="20000" onchange="UpdatePrice()">3Dタイポグラフィ (￥20000-)<br>
+                                <input type="radio" name="lyrics" value="10000" onchange="UpdatePrice()">簡易2D (￥10000-)<br>
+                                <input type="radio" name="lyrics" value="0" onchange="UpdatePrice()" checked="checked">なし (￥0-)
+                            </td>
+                            <td name="colorFlag"><h13 id="price_7">お尋ねください</h13></td>
+                        </tr>
+                        <tr>
+                            <th name="colorFlag">カメラワーク</th>
+                            <td name="colorFlag">
+                                <input type="radio" name="motion_camera" value="20000" onchange="UpdatePrice()" checked="checked">要 (￥20000-)<br>
+                                <input type="radio" name="motion_camera" value="0" onchange="UpdatePrice()">不要 (￥0-) *360度動画やVRライブ作成の場合など
+                            </td>
+                            <td name="colorFlag"><h13 id="price_8">お尋ねください</h13></td>
+                        </tr>
+
+
+                        <tr>
+                            <th>見積り金額</th>
+                            <td></td>
+                            <td><h13 id="price_sum">お尋ねください</h13></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
 
 
 
-<script language="javascript" type="text/javascript">
-  function UpdatePrice() {
-  /*制作方式*/
-    var making = document.getElementsByName("making");
-    var price_1000 = document.getElementById("price_1000");
-    for(var i = 0; i < making.length; i++){
-      if(making[i].checked) {
-	      if(making[i].value == "true") {
-				price_1000.innerHTML = "-----";
-		  }else{
-				price_1000.innerHTML = "￥30000-";	  
-		  }
-      }
-    }
+                <script language="javascript" type="text/javascript">function UpdatePrice() {
+                        /*制作方式*/
+                        var making = document.getElementsByName("making");
+                        var price_1000 = document.getElementById("price_1000");
+                        for (var i = 0; i < making.length; i++) {
+                            if (making[i].checked) {
+                                if (making[i].value == "true") {
+                                    price_1000.innerHTML = "-----";
+                                } else {
+                                    price_1000.innerHTML = "￥30000-";
+                                }
+                            }
+                        }
 
-  /*アバター調整*/
-    var avatar = document.getElementsByName("avatar");
-    var price_0 = document.getElementById("price_0");
-    for(var i = 0; i < avatar.length; i++){
-      if(avatar[i].checked) {
-        price_0.innerHTML = "￥" + avatar[i].value + "-";
-      }
-    }
+                        /*アバター調整*/
+                        var avatar = document.getElementsByName("avatar");
+                        var price_0 = document.getElementById("price_0");
+                        for (var i = 0; i < avatar.length; i++) {
+                            if (avatar[i].checked) {
+                                price_0.innerHTML = "￥" + avatar[i].value + "-";
+                            }
+                        }
 
-  /*物理演算*/
-    var physics = document.getElementsByName("physics");
-    var price_1 = document.getElementById("price_1");
-    for(var i = 0; i < physics.length; i++){
-      if(physics[i].checked) {
-        price_1.innerHTML = "￥" + physics[i].value + "-";
-      }
-    }
+                        /*物理演算*/
+                        var physics = document.getElementsByName("physics");
+                        var price_1 = document.getElementById("price_1");
+                        for (var i = 0; i < physics.length; i++) {
+                            if (physics[i].checked) {
+                                price_1.innerHTML = "￥" + physics[i].value + "-";
+                            }
+                        }
 
-  /*身体モーション作成・修正*/
-    var motion_body = document.getElementsByName("motion_body");
-    var price_2 = document.getElementById("price_2");
-    for(var i = 0; i < motion_body.length; i++){
-      if(motion_body[i].checked) {
-        price_2.innerHTML = "￥" + motion_body[i].value + "-";
-      }
-    }
+                        /*身体モーション作成・修正*/
+                        var motion_body = document.getElementsByName("motion_body");
+                        var price_2 = document.getElementById("price_2");
+                        for (var i = 0; i < motion_body.length; i++) {
+                            if (motion_body[i].checked) {
+                                price_2.innerHTML = "￥" + motion_body[i].value + "-";
+                            }
+                        }
 
-  /*身体モーション修正 (身体モーション作成と統合しました)
-    var motion_body_fix = document.getElementsByName("motion_body_fix");
-    var price_3 = document.getElementById("price_3");
-    for(var i = 0; i < motion_body_fix.length; i++){
-      if(motion_body_fix[i].checked) {
-        price_3.innerHTML = "￥" + motion_body_fix[i].value + "-";
-      }
-    }*/
+                        /*身体モーション修正 (身体モーション作成と統合しました)
+                          var motion_body_fix = document.getElementsByName("motion_body_fix");
+                          var price_3 = document.getElementById("price_3");
+                          for(var i = 0; i < motion_body_fix.length; i++){
+                            if(motion_body_fix[i].checked) {
+                              price_3.innerHTML = "￥" + motion_body_fix[i].value + "-";
+                            }
+                          }*/
 
-  /*指モーション作成・修正*/
-    var motion_finger = document.getElementsByName("motion_finger");
-    var price_4 = document.getElementById("price_4");
-    for(var i = 0; i < motion_finger.length; i++){
-      if(motion_finger[i].checked) {
-        price_4.innerHTML = "￥" + motion_finger[i].value + "-";
-      }
-    }
+                        /*指モーション作成・修正*/
+                        var motion_finger = document.getElementsByName("motion_finger");
+                        var price_4 = document.getElementById("price_4");
+                        for (var i = 0; i < motion_finger.length; i++) {
+                            if (motion_finger[i].checked) {
+                                price_4.innerHTML = "￥" + motion_finger[i].value + "-";
+                            }
+                        }
 
-  /*表情・リップモーション作成*/
-    var motion_facial = document.getElementsByName("motion_facial");
-    var price_5 = document.getElementById("price_5");
-    for(var i = 0; i < motion_facial.length; i++){
-      if(motion_facial[i].checked) {
-        price_5.innerHTML = "￥" + motion_facial[i].value + "-";
-      }
-    }
+                        /*表情・リップモーション作成*/
+                        var motion_facial = document.getElementsByName("motion_facial");
+                        var price_5 = document.getElementById("price_5");
+                        for (var i = 0; i < motion_facial.length; i++) {
+                            if (motion_facial[i].checked) {
+                                price_5.innerHTML = "￥" + motion_facial[i].value + "-";
+                            }
+                        }
 
-  /*ビジュアル調整*/
-    var visual = document.getElementsByName("visual");
-    var price_6 = document.getElementById("price_6");
-    for(var i = 0; i < visual.length; i++){
-      if(visual[i].checked) {
-        price_6.innerHTML = "￥" + visual[i].value + "-";
-      }
-    }
+                        /*ビジュアル調整*/
+                        var visual = document.getElementsByName("visual");
+                        var price_6 = document.getElementById("price_6");
+                        for (var i = 0; i < visual.length; i++) {
+                            if (visual[i].checked) {
+                                price_6.innerHTML = "￥" + visual[i].value + "-";
+                            }
+                        }
 
-  /*歌詞入れ*/
-    var lyrics = document.getElementsByName("lyrics");
-    var price_7 = document.getElementById("price_7");
-    for(var i = 0; i < lyrics.length; i++){
-      if(lyrics[i].checked) {
-        price_7.innerHTML = "￥" + lyrics[i].value + "-";
-      }
-    }
+                        /*歌詞入れ*/
+                        var lyrics = document.getElementsByName("lyrics");
+                        var price_7 = document.getElementById("price_7");
+                        for (var i = 0; i < lyrics.length; i++) {
+                            if (lyrics[i].checked) {
+                                price_7.innerHTML = "￥" + lyrics[i].value + "-";
+                            }
+                        }
 
-  /*カメラワーク*/
-    var motion_camera = document.getElementsByName("motion_camera");
-    var price_8 = document.getElementById("price_8");
-    for(var i = 0; i < motion_camera.length; i++){
-      if(motion_camera[i].checked) {
-        price_8.innerHTML = "￥" + motion_camera[i].value + "-";
-      }
-    }
+                        /*カメラワーク*/
+                        var motion_camera = document.getElementsByName("motion_camera");
+                        var price_8 = document.getElementById("price_8");
+                        for (var i = 0; i < motion_camera.length; i++) {
+                            if (motion_camera[i].checked) {
+                                price_8.innerHTML = "￥" + motion_camera[i].value + "-";
+                            }
+                        }
 
-  /*見積り合計*/
-    var price_sum = document.getElementById("price_sum");
-	var sum = parseInt(price_0.innerHTML.replace("￥", ""))
-			+ parseInt(price_1.innerHTML.replace("￥", ""))
-			+ parseInt(price_2.innerHTML.replace("￥", ""))
-		/*  + parseInt(price_3.innerHTML.replace("￥", ""))  身体モーション作成(price_2)と統合したので不要 */
-			+ parseInt(price_4.innerHTML.replace("￥", ""))
-			+ parseInt(price_5.innerHTML.replace("￥", ""))
-			+ parseInt(price_6.innerHTML.replace("￥", ""))
-			+ parseInt(price_7.innerHTML.replace("￥", ""))
-			+ parseInt(price_8.innerHTML.replace("￥", ""));
-	if(price_1000.innerHTML == "-----"){
-	    price_sum.innerHTML = "￥" + String(sum) + "-";
-	}else{
-	    price_sum.innerHTML = "￥30000-";
-	}
+                        /*見積り合計*/
+                        var price_sum = document.getElementById("price_sum");
+                        var sum = parseInt(price_0.innerHTML.replace("￥", ""))
+                            + parseInt(price_1.innerHTML.replace("￥", ""))
+                            + parseInt(price_2.innerHTML.replace("￥", ""))
+                            /*  + parseInt(price_3.innerHTML.replace("￥", ""))  身体モーション作成(price_2)と統合したので不要 */
+                            + parseInt(price_4.innerHTML.replace("￥", ""))
+                            + parseInt(price_5.innerHTML.replace("￥", ""))
+                            + parseInt(price_6.innerHTML.replace("￥", ""))
+                            + parseInt(price_7.innerHTML.replace("￥", ""))
+                            + parseInt(price_8.innerHTML.replace("￥", ""));
+                        if (price_1000.innerHTML == "-----") {
+                            price_sum.innerHTML = "￥" + String(sum) + "-";
+                        } else {
+                            price_sum.innerHTML = "￥30000-";
+                        }
 
-  /*お手軽MVパックの場合に不要な行の色を変える/元に戻す*/
-	var colorFlag = document.getElementsByName("colorFlag");
-	if(price_1000.innerHTML == "-----"){
-		colorFlag.forEach(element => element.classList.remove("disable"));
-	}else{
-		colorFlag.forEach(element => element.classList.add("disable"));
-	}
-  }
-  UpdatePrice();
-  </script>
+                        /*お手軽MVパックの場合に不要な行の色を変える/元に戻す*/
+                        var colorFlag = document.getElementsByName("colorFlag");
+                        if (price_1000.innerHTML == "-----") {
+                            colorFlag.forEach(element => element.classList.remove("disable"));
+                        } else {
+                            colorFlag.forEach(element => element.classList.add("disable"));
+                        }
+                    }
+                    UpdatePrice();</script>
 
-<br>
-<br>
-
-
-<div class="list">
-<h4><strong class="color1"><font size = "5">*お手軽MVパック</font></strong>　身体モーションやカメラワークが作成済みの楽曲を対象とした、納品が早く料金も安いプランです。<br>
-　　　　　　　　　　　依頼ごとに多少アレンジはしますが、複数のマイナーチェンジのMVが世の中に存在することになります。<br>
-　　　　　　　　　　　お手軽MVパックの意図については<a href="https://maron.fanbox.cc/posts/1893007" target="_blank" rel="noopener noreferrer">こちら</a>に詳しく書いていますのでご参考ください。<br>
-　　　　　　　　　　　※現在お手軽MVパックは現在受け付け停止中です、再開をお待ちください(from 2021/8/25)</h4>
-<br>
-<!--<h4>『好き！雪！本気マジック』<a href="https://youtu.be/gZm6aSamgfg" target="_blank" rel="noopener noreferrer">サンプル動画 (YouTubeへ飛びます)</a>-->
-</h4>
-<br>
-<br>
-<div class="list">
-<h4><strong class="color1"><font size = "5">**ビジュアル調整</font></strong>　HDRPとBuilt-inの2種類の質感を選べます。HDRPの方がより高度なレンダリングです。</h4>
-<div class="inner">
-<h12><img src="images/musicvideo/musicvideo_hdrp.png" alt=""></h12>
-<h12><img src="images/musicvideo/musicvideo_srp.png" alt=""></h12>
-</div>
-<br>
-<br>
-<h4><strong class="color1"><font size = "5">***歌詞入れ</font></strong>　3Dタイポグラフィでは3Dの文字が動きます。簡易2Dでは画面下に歌詞を表示します。</h4>
-<div class="inner">
-<h12><img src="images/musicvideo/musicvideo_lyrics3d.png" alt=""></h12>
-<h12><img src="images/musicvideo/musicvideo_lyrics2d.png" alt=""></h12>
-</div>
-</div>
+                <br>
+                <br>
+                    <h4>
+                        <strong class="color1"><font size="5">*お手軽MVパック</font></strong>　身体モーションやカメラワークが作成済みの楽曲を対象とした、納品が早く料金も安いプランです。<br>
+                        依頼ごとに多少アレンジはしますが、複数のマイナーチェンジのMVが世の中に存在することになります。<br>
+                        お手軽MVパックの意図については<a href="https://maron.fanbox.cc/posts/1893007" target="_blank" rel="noopener noreferrer">こちら</a>に詳しく書いていますのでご参考ください。<br>
+                        ※現在お手軽MVパックは現在受け付け停止中です、再開をお待ちください(from 2021/8/25)
+                    </h4>
+                    <br>
+                    <!--<h4>『好き！雪！本気マジック』<a href="https://youtu.be/gZm6aSamgfg" target="_blank" rel="noopener noreferrer">サンプル動画 (YouTubeへ飛びます)</a>-->
+                    <br>
+                    <br>
+                    <div class="list">
+                        <h4><strong class="color1"><font size="5">**ビジュアル調整</font></strong>　HDRPとBuilt-inの2種類の質感を選べます。HDRPの方がより高度なレンダリングです。</h4>
+                        <div class="inner">
+                            <h12><img src="images/musicvideo/musicvideo_hdrp.png" alt=""></h12>
+                            <h12><img src="images/musicvideo/musicvideo_srp.png" alt=""></h12>
+                        </div>
+                        <br>
+                        <br>
+                        <h4><strong class="color1"><font size="5">***歌詞入れ</font></strong>　3Dタイポグラフィでは3Dの文字が動きます。簡易2Dでは画面下に歌詞を表示します。</h4>
+                        <div class="inner">
+                            <h12><img src="images/musicvideo/musicvideo_lyrics3d.png" alt=""></h12>
+                            <h12><img src="images/musicvideo/musicvideo_lyrics2d.png" alt=""></h12>
+                        </div>
+                    </div>
 
 
-<br>
-<br>
+                    <br>
+                    <br>
 
-<div class="list banner">
-<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4XWqlc9V-LBvRst-fV_m2k9nwuwsO36QK4DZbRXKU624UvQ/viewform" target="_blank" rel="noopener noreferrer"><img src="images/banner/link_otoiawase.png" alt=""></a></p>
-</div>
-</section>
+                    <div class="list banner">
+                        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4XWqlc9V-LBvRst-fV_m2k9nwuwsO36QK4DZbRXKU624UvQ/viewform" target="_blank" rel="noopener noreferrer"><img src="images/banner/link_otoiawase.png" alt=""></a></p>
+                    </div>
+            </section>
 
 
-</div>
-<!--/#contents-->
+        </div>
+        <!--/#contents-->
 
-<footer>
-<small>Copyright&copy; 八ツ橋まろん All Rights Reserved.</small>
-<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
-</footer>
+        <footer>
+            <small>Copyright&copy; 八ツ橋まろん All Rights Reserved.</small>
+            <span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+        </footer>
 
-</div>
-<!--/#container-->
-
-<!--ページの上部に戻る「↑」ボタン-->
-<p class="nav-fix-pos-pagetop"><a href="#"><img src="images/pagetop.png" alt="PAGE TOP"></a></p>
+    </div>
+    <!--/#container-->
 
 </body>
 </html>

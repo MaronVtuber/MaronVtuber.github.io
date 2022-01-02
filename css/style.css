@@ -197,13 +197,49 @@ header #logo img {
 		width: 100%; /*画像の幅*/
 		max-width: 700px; /*画像Max幅*/
 	}
+
 	.activity_introduction.banner {
 	}
+
 		.activity_introduction.banner img {
 			border-radius: 0px; /*角を丸くする指定*/
 			max-width: 200px; /*画像Max幅*/
 			width: 100%; /*画像幅*/
 		}
+
+/*MV紹介ブロック
+---------------------------------------------------------------------------*/
+.musicvideo_introduction {
+	text-align: center;
+	font-size: 18px; /*文字サイズ*/
+}
+
+	.musicvideo_introduction img {
+		border-radius: 10px; /*角を丸くする指定*/
+		width: 50%; /*画像の幅*/
+		max-width: 700px; /*画像Max幅*/
+	}
+
+	.musicvideo_introduction.banner {
+	}
+
+		.musicvideo_introduction.banner img {
+			border-radius: 0px; /*角を丸くする指定*/
+			max-width: 300px; /*画像Max幅*/
+			width: 100%; /*画像幅*/
+		}
+
+
+/*制作例ブロック
+---------------------------------------------------------------------------*/
+.mvexample {
+	text-align: center;
+}
+
+	.mvexample iframe {
+		width: 100%; /*画像の幅*/
+		max-width: 420px; /*画像Max幅*/
+	}
 
 
 /*listブロック
