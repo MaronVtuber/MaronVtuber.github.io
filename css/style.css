@@ -18,20 +18,27 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	color: #545454;	/*全体の文字色*/
-	font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
-	font-size: 15px;		/*文字サイズ*/
-	line-height: 2.5;		/*行間*/
-	background: #f7f4f0;	/*背景色*/
+	color: #545454; /*全体の文字色*/
+	font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; /*フォント種類*/
+	font-size: 15px; /*文字サイズ*/
+	line-height: 2.5; /*行間*/
+	background: #f7f4f0; /*背景色*/
 	-webkit-text-size-adjust: none;
 }
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
 ul {list-style-type: none;}
 ol {padding-left: 40px;padding-bottom: 15px;}
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+img {
+	border: none;
+	border-radius: 10px;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
 table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
 iframe {width: 100%;}
-
+  
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
@@ -46,7 +53,7 @@ a:hover {
 /*コンテナー（サイト全体を囲むブロック）
 ---------------------------------------------------------------------------*/
 #container {
-	max-width: 1400px;	/*最大幅。これ以上広くならない指定。*/
+	max-width: 1400px;	/*最大幅。これ以上広くならない指定。見やすさ的にこのくらいにしておくといい感じになる*/
 	margin: 0 auto;
 }
 
@@ -124,6 +131,10 @@ header #logo img {
 	font-size: 18px;		/*文字サイズ*/
 	text-align: center;		/*文字をセンタリング*/
 }
+#contents h4 {
+	text-align: center
+}
+
 /*コンテンツ内にあるp(段落)タグ設定*/
 #contents p {
 	padding: 0px 20px 30px;	/*上、左右、下への余白*/
@@ -155,109 +166,152 @@ header #logo img {
 	font-size: 150%;		/*文字サイズ*/
 }
 
+/*更新情報ブロック
+---------------------------------------------------------------------------*/
+.whats_new {
+	text-align: left;
+	font-size: 15px; /*文字サイズ*/
+}
+
+/*自己紹介ブロック
+---------------------------------------------------------------------------*/
+.self_introduction {
+	text-align: center;
+	font-size: 18px; /*文字サイズ*/
+}
+
+	.self_introduction img {
+		border-radius: 10px; /*角を丸くする指定*/
+		width: 50%; /*画像の幅*/
+	}
+
+/*活動紹介ブロック
+---------------------------------------------------------------------------*/
+.activity_introduction {
+	text-align: center;
+	font-size: 18px; /*文字サイズ*/
+}
+
+	.activity_introduction img {
+		border-radius: 10px; /*角を丸くする指定*/
+		width: 100%; /*画像の幅*/
+		max-width: 700px; /*画像Max幅*/
+	}
+	.activity_introduction.banner {
+	}
+		.activity_introduction.banner img {
+			border-radius: 0px; /*角を丸くする指定*/
+			max-width: 200px; /*画像Max幅*/
+			width: 30%; /*画像幅*/
+		}
+
 
 /*listブロック
 ---------------------------------------------------------------------------*/
 /*各ブロックごとの設定*/
 .list {
 	overflow: hidden;
-	font-size: 90%;		/*文字サイズ*/
-	margin-bottom: 30px;	/*ブロックの下に空けるスペース*/
+	font-size: 90%; /*文字サイズ*/
+	margin-bottom: 30px; /*ブロックの下に空けるスペース*/
 }
-/*各ブロックごとの設定（thumb属性への追加指定）*/
-.list.thumb {
-	width: 23%;			/*画像幅*/
-	margin: 0 1% 30px;
-	padding-top: 1%;
-	float: left;		/*画像を左に回り込み*/
-	text-align: center;
-}
-/*各ブロックごとの設定（banner属性への追加指定）*/
-.list.banner{
-/*	background: yellow;*/
-	width: 60%;			/*画像幅*/
-	margin: 0 1% 30px;
-	padding-top: 1%;
-	float: right;		/*画像を右に回り込み*/
-	text-align: right;
-}
-.list.link{
-/*	background: yellow;*/
-	width: 60%;			/*画像幅*/
-	margin: 0 1% 30px;
-	padding-top: 1%;
-	float: right;		/*画像を右に回り込み*/
-	text-align: right;
-}
-/*画像の設定*/
-.list img {
-	border-radius: 10px;	/*角を丸くする指定*/
-	width: 30%;			/*画像の幅*/
-	float: left;		/*画像を左に回り込み*/
-	margin-right: 3%;	/*画像の右に空けるスペース*/
-}
-/*画像の設定（サムネイルタイプへの追加指定）*/
-.list.thumb img {
-	margin: 0;
-	float: none;
-	width: 60%;		/*画像の幅*/
-}
-/*画像の設定（サムネイルタイプへの追加指定）*/
-.list.banner img {
-	border-radius: 0px;	/*角を四角くする指定*/
-	margin: 0;
-	float: none;
-	width: 30%;		/*画像の幅*/
-}
-.list.link img {
-	border-radius: 0px;	/*角を四角くする指定*/
-	margin: 0;
-	float: none;
-	width: 45%;		/*画像の幅*/
-}
-/*マウスオン事*/
-.list a:hover img {
-	transition: 0.5s;
-	opacity: 0.7;	/*透明度。70%色が出た状態。*/
-}
-/*マウスオン事（サムネイルタイプへの追加指定）*/
-.list.thumb a:hover img {
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-}
-/*マウスオン事（banner属性への追加指定）*/
-.list.banner a:hover img {
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-}
-/*マウスオン事（banner属性への追加指定）*/
-.list.link a:hover img {
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-}
-/*largeタグ*/
-.list large {
-	font-size: 140%;	/*文字サイズ*/
-}
-/*h4タグ*/
-.list h4 {
-	font-size: 140%;	/*文字サイズ*/
-}
-/*h4タグ（サムネイルタイプへの追加指定）*/
-.list.thumb h4 {
-	font-size: 100%;	/*文字サイズ*/
-}
-/*p(段落)タグ*/
-.list p {
-	padding: 0 !important;
-	line-height: 2;
-}
-.list.banner.inner{
-	padding-top: 30px;
-	padding-bottom: 30px;
-	display: flex;
-	justify-content: flex-end;
-}
-.list.banner.inner img {
-	width: 200px;		/*画像の幅*/
-}
+	/*各ブロックごとの設定（thumb属性への追加指定）*/
+	.list.thumb {
+		width: 23%; /*画像幅*/
+		margin: 0 1% 30px;
+		padding-top: 1%;
+		float: left; /*画像を左に回り込み*/
+		text-align: center;
+	}
+	/*各ブロックごとの設定（banner属性への追加指定）*/
+	.list.banner {
+		/*	background: yellow;*/
+		width: 60%; /*画像幅*/
+		margin: 0 1% 30px;
+		padding-top: 1%;
+		float: right; /*画像を右に回り込み*/
+		text-align: right;
+	}
+
+	.list.link {
+		/*	background: yellow;*/
+		width: 60%; /*画像幅*/
+		margin: 0 1% 30px;
+		padding-top: 1%;
+		float: right; /*画像を右に回り込み*/
+		text-align: right;
+	}
+	/*画像の設定*/
+	.list img {
+		border-radius: 10px; /*角を丸くする指定*/
+		width: 30%; /*画像の幅*/
+		float: left; /*画像を左に回り込み*/
+		margin-right: 3%; /*画像の右に空けるスペース*/
+	}
+	/*画像の設定（サムネイルタイプへの追加指定）*/
+	.list.thumb img {
+		margin: 0;
+		float: none;
+		width: 60%; /*画像の幅*/
+	}
+	/*画像の設定（サムネイルタイプへの追加指定）*/
+	.list.banner img {
+		border-radius: 0px; /*角を四角くする指定*/
+		margin: 0;
+		float: none;
+		width: 30%; /*画像の幅*/
+	}
+
+	.list.link img {
+		border-radius: 0px; /*角を四角くする指定*/
+		margin: 0;
+		float: none;
+		width: 45%; /*画像の幅*/
+	}
+	/*マウスオン事*/
+	.list a:hover img {
+		transition: 0.5s;
+		opacity: 0.7; /*透明度。70%色が出た状態。*/
+	}
+	/*マウスオン事（サムネイルタイプへの追加指定）*/
+	.list.thumb a:hover img {
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+	}
+	/*マウスオン事（banner属性への追加指定）*/
+	.list.banner a:hover img {
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+	}
+	/*マウスオン事（banner属性への追加指定）*/
+	.list.link a:hover img {
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+	}
+	/*largeタグ*/
+	.list large {
+		font-size: 140%; /*文字サイズ*/
+	}
+	/*h4タグ*/
+	.list h4 {
+		font-size: 140%; /*文字サイズ*/
+	}
+	/*h4タグ（サムネイルタイプへの追加指定）*/
+	.list.thumb h4 {
+		font-size: 100%; /*文字サイズ*/
+	}
+	/*p(段落)タグ*/
+	.list p {
+		padding: 0 !important;
+		line-height: 2;
+	}
+
+	.list.banner.inner {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+		.list.banner.inner img {
+			width: 200px; /*画像の幅*/
+		}
 
 /*inner（等間隔に画像を並べる）
 ---------------------------------------------------------------------------*/
@@ -344,11 +398,19 @@ footer .pr {display: block;}
 
 /*box1指定（角丸のボックス）
 ---------------------------------------------------------------------------*/
+.whiteblock {
+	overflow: hidden;
+	position: relative;
+	padding: 20px 40px; /*上下、左右へのボックス内の余白*/
+	border-radius: 30px; /*角丸のサイズ。この１行を削除すると、通常の長方形になります。*/
+	margin-bottom: 30px; /*次の領域との間に空けるスペース*/
+	background: #fff; /*背景色*/
+}
 .box1 {
 	overflow: hidden;position: relative;
 	padding: 20px 40px;		/*上下、左右へのボックス内の余白*/
 	border-radius: 30px;	/*角丸のサイズ。この１行を削除すると、通常の長方形になります。*/
-	margin-bottom: 30px;	/*下に空けるスペース*/
+	margin-bottom: 30px;	/*次の領域との間に空けるスペース*/
 	background: #fff;		/*背景色*/
 }
 /*bg1タイプの背景色*/
