@@ -30,7 +30,6 @@ ul {list-style-type: none;}
 ol {padding-left: 40px;padding-bottom: 15px;}
 img {
 	border: none;
-	border-radius: 10px;
 	max-width: 100%;
 	width: 100%;
 	height: auto;
@@ -171,6 +170,7 @@ header #logo img {
 .whats_new {
 	text-align: left;
 	font-size: 15px; /*文字サイズ*/
+	
 }
 
 /*自己紹介ブロック
@@ -202,7 +202,7 @@ header #logo img {
 		.activity_introduction.banner img {
 			border-radius: 0px; /*角を丸くする指定*/
 			max-width: 200px; /*画像Max幅*/
-			width: 30%; /*画像幅*/
+			width: 100%; /*画像幅*/
 		}
 
 

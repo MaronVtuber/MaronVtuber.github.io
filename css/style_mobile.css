@@ -18,35 +18,63 @@
 body {
 	margin: 0px;
 	padding: 0px;
-	color: #545454;	/*全体の文字色*/
-	font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
-	font-size: 15px;		/*文字サイズ*/
-	line-height: 2.5;		/*行間*/
-	background: #f7f4f0;	/*背景色*/
+	color: #545454; /*全体の文字色*/
+	font-family: "M PLUS Rounded 1c", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; /*フォント種類*/
+	font-size: 15px; /*文字サイズ*/
+	line-height: 2.5; /*行間*/
+	background: #f7f4f0; /*背景色*/
 	-webkit-text-size-adjust: none;
 }
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
-ul {list-style-type: none;}
-ol {padding-left: 40px;padding-bottom: 15px;}
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
-table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
-iframe {width: 100%;}
+
+h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd, form, figure, form {
+	margin: 0px;
+	padding: 0px;
+	font-size: 100%;
+}
+
+ul {
+	list-style-type: none;
+}
+
+ol {
+	padding-left: 40px;
+	padding-bottom: 15px;
+}
+
+img {
+	border: none;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 100%;
+	border-spacing: 0;
+}
+
+iframe {
+	width: 100%;
+}
 
 /*リンク（全般）設定
 ---------------------------------------------------------------------------*/
 a {
-	color: #545454;		/*リンクテキストの色*/
-	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+	color: #545454; /*リンクテキストの色*/
+	transition: 0.5s; /*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
 }
-a:hover {
-	color: #ffbbbb;			/*マウスオン時の文字色*/
-	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
-}
+
+	a:hover {
+		color: #ffbbbb; /*マウスオン時の文字色*/
+		text-decoration: none; /*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+	}
 
 /*コンテナー（サイト全体を囲むブロック）
 ---------------------------------------------------------------------------*/
 #container {
-	max-width: 1400px;	/*最大幅。これ以上広くならない指定。*/
+	max-width: 1400px; /*最大幅。これ以上広くならない指定。見やすさ的にこのくらいにしておくといい感じになる*/
 	margin: 0 auto;
 }
 
@@ -64,14 +92,15 @@ header {
 }
 /*ロゴ画像*/
 header #logo img {
-	width: 100%;		/*画像の幅*/
+	width: 25%; /*画像の幅*/
 }
 /*トップページのロゴ画像への追加指定*/
 .home header #logo img {
-	position: absolute;z-index: 1;
-	width: 100%;	/*画像の幅*/
-	left: 13%;	/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
-	top: 20px;	/*ロゴやメニューが入っているブロックに対して、上からの配置場所の指定。*/
+	position: absolute;
+	z-index: 1;
+	width: 22%; /*画像の幅*/
+	left: 13%; /*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
+	top: 20px; /*ロゴやメニューが入っているブロックに対して、上からの配置場所の指定。*/
 }
 
 /*メニュー
@@ -80,80 +109,134 @@ header #logo img {
 #menubar {
 	line-height: 2;
 	text-align: center;
-	font-size: 18px;	/*文字サイズ*/	
+	font-size: 18px; /*文字サイズ*/
 }
-/*メニュー１個あたりの指定*/
-#menubar li {
-	display: inline-block;	/*横並びにする指定*/
-	margin: 0px 5px;			/*上下、左右へのメニューの外側にとる余白*/
-}
-#menubar li a {
-	text-decoration: none;display: block;
-	padding: 0px 20px;	/*上下、左右へのメニューの内側にとる余白*/
-}
-/*現在表示中(current)と、マウスオン時の指定*/
-#menubar li.current a, #menubar li a:hover {
-	background: #ffbbbb;	/*背景色*/
-	color: #fff;			/*文字色*/
-	border-radius: 100px;	/*角丸のサイズ。大きめであれば適当で構いません。この１行を削除すると、長方形になります。*/
-}
+	/*メニュー１個あたりの指定*/
+	#menubar li {
+		display: inline-block; /*横並びにする指定*/
+		margin: 0px 5px; /*上下、左右へのメニューの外側にとる余白*/
+	}
+
+		#menubar li a {
+			text-decoration: none;
+			display: block;
+			padding: 0px 20px; /*上下、左右へのメニューの内側にとる余白*/
+		}
+			/*現在表示中(current)と、マウスオン時の指定*/
+			#menubar li.current a, #menubar li a:hover {
+				background: #ffbbbb; /*背景色*/
+				color: #fff; /*文字色*/
+				border-radius: 100px; /*角丸のサイズ。大きめであれば適当で構いません。この１行を削除すると、長方形になります。*/
+			}
 
 /*コンテンツ（ヘッダーとフッター以外を囲むブロック）
 ---------------------------------------------------------------------------*/
 #contents {
 	overflow: hidden;
-	padding: 50px 3%;	/*上下、左右へのブロック内の余白*/
+	padding: 50px 3%; /*上下、左右へのブロック内の余白*/
 }
-/*コンテンツ内にあるh2(見出し)タグの指定*/
-#contents h2 {
-	clear: both;
-	margin-bottom: 30px;
-	font-size: 24px;		/*文字サイズ*/
-	text-align: center;		/*文字をセンタリング*/
-	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くする指定*/
-}
-#contents h2 span {
-	display: inline-block;
-	background: url(../images/line1.png) repeat-x center bottom / auto 2px;	/*下線画像の読み込み。2pxは画像の高さの指定。*/
-	padding: 0px 30px;	/*上下、左右への余白。文字の両サイドをここで空ける分だけ、下線が見えます。*/
-}
-/*コンテンツ内にあるh3(見出し)タグの指定*/
-#contents h3 {
-	clear: both;
-	margin-bottom: 30px;
-	font-size: 18px;		/*文字サイズ*/
-	text-align: center;		/*文字をセンタリング*/
-}
-/*コンテンツ内にあるp(段落)タグ設定*/
-#contents p {
-	padding: 0px 20px 30px;	/*上、左右、下への余白*/
-}
-/*他。微調整。*/
-#contents p + p {
-	margin-top: -5px;
-}
-#contents h2 + p,
-#contents h3 + p {
-	margin-top: -10px;
+	/*コンテンツ内にあるh2(見出し)タグの指定*/
+	#contents h2 {
+		clear: both;
+		margin-bottom: 30px;
+		font-size: 24px; /*文字サイズ*/
+		text-align: center; /*文字をセンタリング*/
+		letter-spacing: 0.1em; /*文字間隔を少しだけ広くする指定*/
+	}
+
+		#contents h2 span {
+			display: inline-block;
+			background: url(../images/line1.png) repeat-x center bottom / auto 2px; /*下線画像の読み込み。2pxは画像の高さの指定。*/
+			padding: 0px 30px; /*上下、左右への余白。文字の両サイドをここで空ける分だけ、下線が見えます。*/
+		}
+	/*コンテンツ内にあるh3(見出し)タグの指定*/
+	#contents h3 {
+		clear: both;
+		margin-bottom: 30px;
+		font-size: 18px; /*文字サイズ*/
+		text-align: center; /*文字をセンタリング*/
+	}
+
+	#contents h4 {
+		text-align: center
+	}
+
+	/*コンテンツ内にあるp(段落)タグ設定*/
+	#contents p {
+		padding: 0px 20px 30px; /*上、左右、下への余白*/
+	}
+		/*他。微調整。*/
+		#contents p + p {
+			margin-top: -5px;
+		}
+
+	#contents h2 + p,
+	#contents h3 + p {
+		margin-top: -10px;
+	}
+
+	#contents h10 {
+		margin: 20px;
+	}
+
+	#contents h11 {
+		margin: 5px;
+	}
+
+	#contents h12 {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	#contents h13 {
+		margin-right: 50px;
+		text-align: center
+	}
+
+	#contents h14 {
+		font-size: 150%; /*文字サイズ*/
+	}
+
+/*更新情報ブロック
+---------------------------------------------------------------------------*/
+.whats_new {
+	text-align: left;
+	font-size: 15px; /*文字サイズ*/
 }
 
-#contents h10 {
-	margin: 20px;
+/*自己紹介ブロック
+---------------------------------------------------------------------------*/
+.self_introduction {
+	text-align: center;
+	font-size: 18px; /*文字サイズ*/
 }
-#contents h11 {
-	margin: 5px;
+
+	.self_introduction img {
+		border-radius: 10px; /*角を丸くする指定*/
+		width: 50%; /*画像の幅*/
+	}
+
+/*活動紹介ブロック
+---------------------------------------------------------------------------*/
+.activity_introduction {
+	text-align: center;
+	font-size: 18px; /*文字サイズ*/
 }
-#contents h12 {
-	margin-left: 20px;
-	margin-right: 20px;
-}
-#contents h13 {
-	margin-right: 50px;
-	text-align: centerh4
-}
-#contents h14 {
-	font-size: 150%;		/*文字サイズ*/
-}
+
+	.activity_introduction img {
+		border-radius: 10px; /*角を丸くする指定*/
+		width: 100%; /*画像の幅*/
+		max-width: 700px; /*画像Max幅*/
+	}
+
+	.activity_introduction.banner {
+	}
+
+		.activity_introduction.banner img {
+			border-radius: 0px; /*角を丸くする指定*/
+			max-width: 200px; /*画像Max幅*/
+			width: 100%; /*画像幅*/
+		}
 
 
 /*listブロック
@@ -161,103 +244,107 @@ header #logo img {
 /*各ブロックごとの設定*/
 .list {
 	overflow: hidden;
-	font-size: 90%;		/*文字サイズ*/
-	margin-bottom: 30px;	/*ブロックの下に空けるスペース*/
+	font-size: 90%; /*文字サイズ*/
+	margin-bottom: 30px; /*ブロックの下に空けるスペース*/
 }
-/*各ブロックごとの設定（thumb属性への追加指定）*/
-.list.thumb {
-	width: 100%;			/*画像幅*/
-	margin: 0 1% 30px;
-	padding-top: 1%;
-	float: none;		/*画像を左に回り込み*/
-	text-align: center;
-}
-/*各ブロックごとの設定（banner属性への追加指定）*/
+	/*各ブロックごとの設定（thumb属性への追加指定）*/
+	.list.thumb {
+		width: 23%; /*画像幅*/
+		margin: 0 1% 30px;
+		padding-top: 1%;
+		float: left; /*画像を左に回り込み*/
+		text-align: center;
+	}
+	/*各ブロックごとの設定（banner属性への追加指定）*/
 	.list.banner {
 		/*	background: yellow;*/
-		width: 100%; /*画像幅*/
+		width: 60%; /*画像幅*/
 		margin: 0 1% 30px;
 		padding-top: 1%;
-		float: none; /*画像を右に回り込み*/
+		float: right; /*画像を右に回り込み*/
 		text-align: right;
 	}
+
 	.list.link {
 		/*	background: yellow;*/
-		width: 100%; /*画像幅*/
+		width: 60%; /*画像幅*/
 		margin: 0 1% 30px;
 		padding-top: 1%;
-		float: none; /*画像を右に回り込み*/
+		float: right; /*画像を右に回り込み*/
 		text-align: right;
 	}
-/*画像の設定*/
+	/*画像の設定*/
 	.list img {
 		border-radius: 10px; /*角を丸くする指定*/
 		width: 30%; /*画像の幅*/
-		float: none; /*画像を左に回り込み*/
+		float: left; /*画像を左に回り込み*/
 		margin-right: 3%; /*画像の右に空けるスペース*/
 	}
-/*画像の設定（サムネイルタイプへの追加指定）*/
-.list.thumb img {
-	margin: 0;
-	float: none;
-	width: 100%;		/*画像の幅*/
-}
-/*画像の設定（サムネイルタイプへの追加指定）*/
-.list.banner img {
-	border-radius: 0px;	/*角を四角くする指定*/
-	margin: 0;
-	float: none;
-	width: 100%;		/*画像の幅*/
-}
-.list.link img {
-	border-radius: 0px;	/*角を四角くする指定*/
-	margin: 0;
-	float: none;
-	width: 100%;		/*画像の幅*/
-}
-/*マウスオン事*/
-.list a:hover img {
-	transition: 0.5s;
-	opacity: 0.7;	/*透明度。70%色が出た状態。*/
-}
-/*マウスオン事（サムネイルタイプへの追加指定）*/
-.list.thumb a:hover img {
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-}
-/*マウスオン事（banner属性への追加指定）*/
-.list.banner a:hover img {
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-}
-/*マウスオン事（banner属性への追加指定）*/
-.list.link a:hover img {
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-}
-/*largeタグ*/
-.list large {
-	font-size: 140%;	/*文字サイズ*/
-}
-/*h4タグ*/
-.list h4 {
-	font-size: 140%;	/*文字サイズ*/
-}
-/*h4タグ（サムネイルタイプへの追加指定）*/
-.list.thumb h4 {
-	font-size: 100%;	/*文字サイズ*/
-}
-/*p(段落)タグ*/
-.list p {
-	padding: 0 !important;
-	line-height: 2;
-}
-.list.banner.inner{
-	padding-top: 30px;
-	padding-bottom: 30px;
-	display: flex;
-	justify-content: flex-end;
-}
-.list.banner.inner img {
-	width: 100%;		/*画像の幅*/
-}
+	/*画像の設定（サムネイルタイプへの追加指定）*/
+	.list.thumb img {
+		margin: 0;
+		float: none;
+		width: 60%; /*画像の幅*/
+	}
+	/*画像の設定（サムネイルタイプへの追加指定）*/
+	.list.banner img {
+		border-radius: 0px; /*角を四角くする指定*/
+		margin: 0;
+		float: none;
+		width: 30%; /*画像の幅*/
+	}
+
+	.list.link img {
+		border-radius: 0px; /*角を四角くする指定*/
+		margin: 0;
+		float: none;
+		width: 45%; /*画像の幅*/
+	}
+	/*マウスオン事*/
+	.list a:hover img {
+		transition: 0.5s;
+		opacity: 0.7; /*透明度。70%色が出た状態。*/
+	}
+	/*マウスオン事（サムネイルタイプへの追加指定）*/
+	.list.thumb a:hover img {
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+	}
+	/*マウスオン事（banner属性への追加指定）*/
+	.list.banner a:hover img {
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+	}
+	/*マウスオン事（banner属性への追加指定）*/
+	.list.link a:hover img {
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+	}
+	/*largeタグ*/
+	.list large {
+		font-size: 140%; /*文字サイズ*/
+	}
+	/*h4タグ*/
+	.list h4 {
+		font-size: 140%; /*文字サイズ*/
+	}
+	/*h4タグ（サムネイルタイプへの追加指定）*/
+	.list.thumb h4 {
+		font-size: 100%; /*文字サイズ*/
+	}
+	/*p(段落)タグ*/
+	.list p {
+		padding: 0 !important;
+		line-height: 2;
+	}
+
+	.list.banner.inner {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+		.list.banner.inner img {
+			width: 200px; /*画像の幅*/
+		}
 
 /*inner（等間隔に画像を並べる）
 ---------------------------------------------------------------------------*/
@@ -265,51 +352,54 @@ header #logo img {
 	padding-top: 30px;
 	display: flex;
 	justify-content: space-evenly;
-  }
-.inner img {
-	border-radius: 0px;	/*角を四角くする指定*/
-	margin: 0;
-	float: none;
-	width: 100%;		/*画像の幅*/
-  }
-/*マウスオン事*/
-.inner a:hover img {
-	transition: 0.5s;
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-	opacity: 0.7;	/*透明度。70%色が出た状態。*/
 }
+
+	.inner img {
+		border-radius: 0px; /*角を四角くする指定*/
+		margin: 0;
+		float: none;
+		width: 100%; /*画像の幅*/
+	}
+	/*マウスオン事*/
+	.inner a:hover img {
+		transition: 0.5s;
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+		opacity: 0.7; /*透明度。70%色が出た状態。*/
+	}
 
 /*galleryinner（等間隔に画像を並べる）
 ---------------------------------------------------------------------------*/
 .galleryinner {
 	display: flex;
 	justify-content: space-evenly;
-  }
-.galleryinner img {
-	border-radius: 5px;	/*角を四角くする指定*/
-	margin: 10px 100px 0px 50px;
-	float: none;
-  }
-/*マウスオン事*/
-.galleryinner a:hover img {
-	transition: 0.5s;
-	transform: scale(1.05);	/*ほんの少し画像を大きくする指定*/
-	opacity: 0.7;	/*透明度。70%色が出た状態。*/
 }
+
+	.galleryinner img {
+		border-radius: 5px; /*角を四角くする指定*/
+		margin: 10px 100px 0px 50px;
+		float: none;
+	}
+	/*マウスオン事*/
+	.galleryinner a:hover img {
+		transition: 0.5s;
+		transform: scale(1.05); /*ほんの少し画像を大きくする指定*/
+		opacity: 0.7; /*透明度。70%色が出た状態。*/
+	}
 
 /*option1（productページのブロックの右上に斜めに配置している帯）
 ---------------------------------------------------------------------------*/
 .option1 {
-	text-align: center;display: block;
-	width: 100%;		/*幅*/
+	text-align: center;
+	display: block;
+	width: 300px; /*幅*/
 	position: absolute;
-	right: 0px;	/*ボックスに対して右から0pxの場所に配置*/
-	top: 0px;	/*ボックスに対して上から0pxの場所に配置*/
-	transform: rotate(45deg) translate(93px,-45px);	/*45度回転。右へ,下へ(マイナス設定なので上へ向けての指定)の移動距離*/
-	background: #f38080;	/*背景色*/
-	color: #fff;			/*文字色*/
-	letter-spacing: 0.1em;	/*文字間隔をほんの少し広くとる*/
-	box-shadow: -3px 3px 10px rgba(0,0,0,0.15);	/*ボックスの影。右へ、下へ、ぼかし幅、0.15は色が15%出た状態の事。*/
+	right: 0px; /*ボックスに対して右から0pxの場所に配置*/
+	top: 0px; /*ボックスに対して上から0pxの場所に配置*/
+	transform: rotate(45deg) translate(93px,-45px); /*45度回転。右へ,下へ(マイナス設定なので上へ向けての指定)の移動距離*/
+	background: #f38080; /*背景色*/
+	color: #fff; /*文字色*/
+	letter-spacing: 0.1em; /*文字間隔をほんの少し広くとる*/
+	box-shadow: -3px 3px 10px rgba(0,0,0,0.15); /*ボックスの影。右へ、下へ、ぼかし幅、0.15は色が15%出た状態の事。*/
 }
 
 /*フッター設定
@@ -320,21 +410,30 @@ footer {
 	padding: 10px;
 	font-size: 90%;
 }
-footer a {text-decoration: none;}
-footer a:hover {color: #545454;}
-footer .pr {display: block;}
+
+	footer a {
+		text-decoration: none;
+	}
+
+		footer a:hover {
+			color: #545454;
+		}
+
+	footer .pr {
+		display: block;
+	}
 /*トップページ内「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
 /*ブロック全体の設定*/
 #new dl {
-	height: 140px;	/*高さ。内様がこれを超えるとスクロールバーが出ます。*/
+	height: 140px; /*高さ。内様がこれを超えるとスクロールバーが出ます。*/
 	overflow: auto;
 	margin-bottom: 20px;
 }
 /*日付設定*/
 #new dt {
-	float: none;
-	width: 100%;
+	float: left;
+	width: 9em;
 	letter-spacing: 0.1em;
 }
 /*記事設定*/
@@ -344,117 +443,129 @@ footer .pr {display: block;}
 
 /*box1指定（角丸のボックス）
 ---------------------------------------------------------------------------*/
+.whiteblock {
+	overflow: hidden;
+	position: relative;
+	padding: 20px 40px; /*上下、左右へのボックス内の余白*/
+	border-radius: 30px; /*角丸のサイズ。この１行を削除すると、通常の長方形になります。*/
+	margin-bottom: 30px; /*次の領域との間に空けるスペース*/
+	background: #fff; /*背景色*/
+}
+
 .box1 {
-	overflow: hidden;position: relative;
-	padding: 20px 40px;		/*上下、左右へのボックス内の余白*/
-	border-radius: 30px;	/*角丸のサイズ。この１行を削除すると、通常の長方形になります。*/
-	margin-bottom: 30px;	/*下に空けるスペース*/
-	background: #fff;		/*背景色*/
+	overflow: hidden;
+	position: relative;
+	padding: 20px 40px; /*上下、左右へのボックス内の余白*/
+	border-radius: 30px; /*角丸のサイズ。この１行を削除すると、通常の長方形になります。*/
+	margin-bottom: 30px; /*次の領域との間に空けるスペース*/
+	background: #fff; /*背景色*/
 }
 /*bg1タイプの背景色*/
 .bg1 {
-	background: #ede9e2;	/*背景色*/
+	background: #ede9e2; /*背景色*/
 }
 /*bg2タイプの背景色*/
 .bg2 {
-	background: transparent;	/*背景を透明にする*/
-	border: 2px dashed #545454;	/*枠線の幅、線種、色*/
+	background: transparent; /*背景を透明にする*/
+	border: 2px dashed #545454; /*枠線の幅、線種、色*/
 }
 
 /*テーブル
 ---------------------------------------------------------------------------*/
 /*テーブル１行目に入った見出し部分（※caption）*/
 .ta1 caption {
-	border-top: 1px solid #545454;	/*下の線の幅、線種、色*/
-	text-align: center;		/*文字をセンタリング*/
-	padding: 10px;			/*ボックス内の余白*/
-	background: rgba(0,0,0,0.03);	/*背景色。0,0,0は黒の事で0.03は色が3%出た状態の事。*/
+	border-top: 1px solid #545454; /*下の線の幅、線種、色*/
+	text-align: center; /*文字をセンタリング*/
+	padding: 10px; /*ボックス内の余白*/
+	background: rgba(0,0,0,0.03); /*背景色。0,0,0は黒の事で0.03は色が3%出た状態の事。*/
 }
 /*テーブル１行目に入った見出し部分（※tamidashi）*/
 .ta1 th.tamidashi {
 	width: auto;
-	text-align: center;	/*文字をセンタリング*/
+	text-align: center; /*文字をセンタリング*/
 }
 /*ta1テーブルブロック設定*/
 .ta1 {
 	table-layout: fixed;
 	width: 100%;
 	margin: 0 auto 30px;
-	border-top: 1px solid #545454;		/*上の線の幅、線種、色*/
+	border-top: 1px solid #545454; /*上の線の幅、線種、色*/
 }
-.ta1, .ta1 td, .ta1 th {
-	word-break: break-all;
-	border-bottom: 1px solid #545454;	/*各行の下線の幅、線種、色*/
-	padding: 10px;			/*テーブル内の余白*/
-}
-/*テーブルの左側ボックス*/
-.ta1 th {
-	text-align: center;	/*センタリング*/
-	width: 100%;			/*幅*/
-}
+
+	.ta1, .ta1 td, .ta1 th {
+		word-break: break-all;
+		border-bottom: 1px solid #545454; /*各行の下線の幅、線種、色*/
+		padding: 10px; /*テーブル内の余白*/
+	}
+		/*テーブルの左側ボックス*/
+		.ta1 th {
+			text-align: center; /*センタリング*/
+			width: 25%; /*幅*/
+		}
 
 /*テーブル
 ---------------------------------------------------------------------------*/
-table{
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
+table {
+	width: 90%;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-table th,table td{
-  padding: 0px 0px 10px 50px;
-  text-align: left;
-  font-size: 20px;
+	table th, table td {
+		padding: 0px 0px 10px 50px;
+		text-align: left;
+		font-size: 20px;
+	}
+
+	table tr:nth-child(1) th, table tr:nth-child(1) td {
+		color: #eee;
+		text-align: center;
+	}
+
+	table tr:last-child th {
+		color: #eee;
+		text-align: center;
+	}
+
+	table tr:last-child td {
+		color: #eee;
+		text-align: left;
+	}
+
+	table tr:nth-child(odd) {
+		background-color: #eee
+	}
+
+	table tr:nth-child(even) {
+		background-color: #fff
+	}
+
+	table tr .disable {
+		background-color: #777
+	}
+
+	table tr:nth-child(1) {
+		background-color: #555
+	}
+
+	table tr:last-child {
+		background-color: #555
+	}
+
+.gallery table {
+	width: 70%;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-table tr:nth-child(1) th, table tr:nth-child(1) td{
-  color: #eee;
-  text-align: center;
+.gallery img {
+	/*background-color: yellow;*/
 }
 
-table tr:last-child th{
-  color: #eee;
-  text-align: center;
-}
-
-table tr:last-child td{
-  color: #eee;
-  text-align: left;
-}
-
-table tr:nth-child(odd) {
-  background-color: #eee
-}
-
-table tr:nth-child(even) {
-  background-color: #fff
-}
-
-table tr .disable {
-  background-color: #777
-}
-
-table tr:nth-child(1){
-  background-color: #555
-}
-
-table tr:last-child{
-  background-color: #555
-}
-
-.gallery table{
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-.gallery img{
-  /*background-color: yellow;*/
-}
-
-.gallery table th, .gallery table td{
-  text-align: center;
-  font-size: 20px;
-  background-color: white;
+.gallery table th, .gallery table td {
+	text-align: center;
+	font-size: 20px;
+	background-color: white;
 }
 
 
@@ -473,33 +584,41 @@ input[type="reset"].btn {
 	border-radius: 100px;
 	font-size: 16px;
 }
-input[type="submit"].btn:hover,
-input[type="button"].btn:hover,
-input[type="reset"].btn:hover {
-	background: #fff;
-	color: #f38080;
-}
+
+	input[type="submit"].btn:hover,
+	input[type="button"].btn:hover,
+	input[type="reset"].btn:hover {
+		background: #fff;
+		color: #f38080;
+	}
 
 /*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
 body .nav-fix-pos-pagetop a {
 	display: none;
 }
+
 body.is-fixed-pagetop .nav-fix-pos-pagetop a {
-	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
-	width: 80px;		/*ボタンの幅*/
-	line-height: 80px;	/*ボタンの高さ*/
-	bottom: 50px;		/*画面の下からの配置場所指定*/
-	right: 3%;			/*画面の右からの配置場所指定*/
-	background: rgba(255,255,255,0.5);	/*背景色*/
-	border: 1px dashed #ccc;			/*枠線の幅、線種、色*/
-	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	position: fixed;
+	animation-name: opa1;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	width: 80px; /*ボタンの幅*/
+	line-height: 80px; /*ボタンの高さ*/
+	bottom: 50px; /*画面の下からの配置場所指定*/
+	right: 3%; /*画面の右からの配置場所指定*/
+	background: rgba(255,255,255,0.5); /*背景色*/
+	border: 1px dashed #ccc; /*枠線の幅、線種、色*/
+	border-radius: 50%; /*円形にする指定。この１行を削除すると正方形になります。*/
 }
-/*マウスオン時*/
-body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
-	background: #fff;	/*背景色*/
-	border: 1px dashed #ffbbbb;			/*枠線の幅、線種、色*/
-}
+	/*マウスオン時*/
+	body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
+		background: #fff; /*背景色*/
+		border: 1px dashed #ffbbbb; /*枠線の幅、線種、色*/
+	}
 
 /*トップページのNEWアイコン
 ---------------------------------------------------------------------------*/
@@ -511,8 +630,8 @@ body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
 	border-radius: 2px;
 	margin: 0px 5px;
 	vertical-align: text-top;
-	background: #F00;	/*背景色*/
-	color: #FFF;		/*文字色*/
+	background: #F00; /*背景色*/
+	color: #FFF; /*文字色*/
 }
 
 /*ul.disc,olタグ
@@ -521,136 +640,199 @@ ul.disc {
 	list-style: disc;
 	padding: 0 20px 30px 42px;
 }
+
 ol {
 	padding: 0 20px 30px 42px;
 }
 
 /*その他
 ---------------------------------------------------------------------------*/
-.look {background: rgba(0,0,0,0.1);border: 1px solid #ccc;padding: 5px 10px;border-radius: 4px;}
-.mb15,.mb1em {margin-bottom: 15px;}
-.mb30 {margin-bottom: 30px;}
-.clear {clear: both;}
-.color1, .color1 a {color: #f38080;}
-.pr {font-size: 10px;}
-.wl {width: 100%;}
-.ws {width: 100%;}
-.c {text-align: center;}
-.r {text-align: right;}
-.l {text-align: left;}
-.big1 {font-size: 40px;letter-spacing: 0.2em;}
-.mini1 {font-size: 11px;}
+.look {
+	background: rgba(0,0,0,0.1);
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	border-radius: 4px;
+}
+
+.mb15, .mb1em {
+	margin-bottom: 15px;
+}
+
+.mb30 {
+	margin-bottom: 30px;
+}
+
+.clear {
+	clear: both;
+}
+
+.color1, .color1 a {
+	color: #f38080;
+}
+
+.pr {
+	font-size: 10px;
+}
+
+.wl {
+	width: 96%;
+}
+
+.ws {
+	width: 50%;
+}
+
+.c {
+	text-align: center;
+}
+
+.r {
+	text-align: right;
+}
+
+.l {
+	text-align: left;
+}
+
+.big1 {
+	font-size: 40px;
+	letter-spacing: 0.2em;
+}
+
+.mini1 {
+	font-size: 11px;
+}
 
 
 
 /*画面幅600px以下の設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width:600px){
+@media screen and (max-width:600px) {
 
-/*全体の設定
+	/*全体の設定
 ---------------------------------------------------------------------------*/
-body {
-	font-size: 12px;
-	font-size: 2.93vw;
-}
+	body {
+		font-size: 12px;
+		font-size: 2.93vw;
+	}
 
-/*ヘッダー（一番上の、ロゴやスライドショーが入っているブロック）
+	/*ヘッダー（一番上の、ロゴやスライドショーが入っているブロック）
 ---------------------------------------------------------------------------*/
-/*ロゴ画像*/
-header #logo img {
-	width: 100%;		/*画像の幅*/
-}
+	/*ロゴ画像*/
+	header #logo img {
+		width: 200px; /*画像の幅*/
+	}
 
-/*メニュー
+	/*メニュー
 ---------------------------------------------------------------------------*/
-/*メニューブロック全体への指定*/
-#menubar {
-	font-size: 100%;
-}
-#menubar li a {
-	padding: 0px 5px;	/*上下、左右へのメニューの内側にとる余白*/
-}
+	/*メニューブロック全体への指定*/
+	#menubar {
+		font-size: 100%;
+	}
 
-/*listブロック
+		#menubar li a {
+			padding: 0px 5px; /*上下、左右へのメニューの内側にとる余白*/
+		}
+
+	/*listブロック
 ---------------------------------------------------------------------------*/
-/*画像の設定（サムネイルタイプへの追加指定）*/
-.list.thumb img {
-	width: 100%;		/*画像の幅*/
-}
+	/*画像の設定（サムネイルタイプへの追加指定）*/
+	.list.thumb img {
+		width: 90%; /*画像の幅*/
+	}
 
-/*box1指定（角丸のボックス）
+	/*box1指定（角丸のボックス）
 ---------------------------------------------------------------------------*/
-.box1 {
-	padding: 10px 20px;		/*上下、左右へのボックス内の余白*/
-	border-radius: 20px;	/*角丸のサイズ*/
-}
+	.box1 {
+		padding: 10px 20px; /*上下、左右へのボックス内の余白*/
+		border-radius: 20px; /*角丸のサイズ*/
+	}
 
-/*テーブル（ta1）
+	/*テーブル（ta1）
 ---------------------------------------------------------------------------*/
-/*ta1の左側ボックス*/
-.ta1 th {
-	width: 100%;
-}
-
+	/*ta1の左側ボックス*/
+	.ta1 th {
+		width: 100px;
+	}
 }
 
 
 
 /*画面幅480px以下の設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width:480px){
+@media screen and (max-width:480px) {
 
-/*ヘッダー（一番上の、ロゴやスライドショーが入っているブロック）
+	/*ヘッダー（一番上の、ロゴやスライドショーが入っているブロック）
 ---------------------------------------------------------------------------*/
-/*トップページのロゴ画像への追加指定*/
-.home header #logo img {
-	width: 100%;	/*画像の幅*/
-	left: 10%;	/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
-	top: 3px;	/*ロゴやメニューが入っているブロックに対して、上からの配置場所の指定。*/
-}
+	/*トップページのロゴ画像への追加指定*/
+	.home header #logo img {
+		width: 30%; /*画像の幅*/
+		left: 10%; /*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
+		top: 3px; /*ロゴやメニューが入っているブロックに対して、上からの配置場所の指定。*/
+	}
 
-/*コンテンツ（ヘッダーとフッター以外を囲むブロック）
+	/*コンテンツ（ヘッダーとフッター以外を囲むブロック）
 ---------------------------------------------------------------------------*/
-#contents {
-	padding: 30px 3%;
-}
-/*コンテンツ内にあるh2(見出し)タグの指定*/
-#contents h2 {
-	font-size: 16px;		/*文字サイズ*/
-}
-/*コンテンツ内にあるh3(見出し)タグの指定*/
-#contents h3 {
-	font-size: 14px;		/*文字サイズ*/
-}
-/*コンテンツ内にあるp(段落)タグ設定*/
-#contents p {
-	padding: 0px 10px 30px;	/*上、左右、下への余白*/
-}
+	#contents {
+		padding: 30px 3%;
+	}
+		/*コンテンツ内にあるh2(見出し)タグの指定*/
+		#contents h2 {
+			font-size: 16px; /*文字サイズ*/
+		}
+		/*コンテンツ内にあるh3(見出し)タグの指定*/
+		#contents h3 {
+			font-size: 14px; /*文字サイズ*/
+		}
+		/*コンテンツ内にあるp(段落)タグ設定*/
+		#contents p {
+			padding: 0px 10px 30px; /*上、左右、下への余白*/
+		}
 
-/*PAGE TOP（↑）設定
+	/*PAGE TOP（↑）設定
 ---------------------------------------------------------------------------*/
-body.is-fixed-pagetop .nav-fix-pos-pagetop a {
-	width: 100%;		/*ボタンの幅*/
-	line-height: 50px;	/*ボタンの高さ*/
-}
+	body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+		width: 50px; /*ボタンの幅*/
+		line-height: 50px; /*ボタンの高さ*/
+	}
 
-/*ul.disc,olタグ
+	/*ul.disc,olタグ
 ---------------------------------------------------------------------------*/
-ul.disc {
-	padding: 0 10px 20px 25px;
-}
-ol {
-	padding: 0 10px 20px 25px;
-}
+	ul.disc {
+		padding: 0 10px 20px 25px;
+	}
 
-/*その他
+	ol {
+		padding: 0 10px 20px 25px;
+	}
+
+	/*その他
 ---------------------------------------------------------------------------*/
-.big1 {font-size: 20px;}
-.mini1 {font-size: 9px;}
-.sh {display:block;}
-.pc {display:none;}
-.ws,.wl {width: 100%;}
-.fl {float: none;}
-.fr {float: none;}
+	.big1 {
+		font-size: 20px;
+	}
 
+	.mini1 {
+		font-size: 9px;
+	}
+
+	.sh {
+		display: block;
+	}
+
+	.pc {
+		display: none;
+	}
+
+	.ws, .wl {
+		width: 94%;
+	}
+
+	.fl {
+		float: none;
+	}
+
+	.fr {
+		float: none;
+	}
 }
