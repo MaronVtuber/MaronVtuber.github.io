@@ -201,14 +201,14 @@ header #logo img {
 ---------------------------------------------------------------------------*/
 .whats_new {
 	text-align: left;
-	font-size: 15px; /*文字サイズ*/
+	font-size: 10px; /*文字サイズ*/
 }
 
 /*自己紹介ブロック
 ---------------------------------------------------------------------------*/
 .self_introduction {
 	text-align: center;
-	font-size: 18px; /*文字サイズ*/
+	font-size: 12px; /*文字サイズ*/
 }
 
 	.self_introduction img {
@@ -220,7 +220,7 @@ header #logo img {
 ---------------------------------------------------------------------------*/
 .activity_introduction {
 	text-align: center;
-	font-size: 18px; /*文字サイズ*/
+	font-size: 15px; /*文字サイズ*/
 }
 
 	.activity_introduction img {
