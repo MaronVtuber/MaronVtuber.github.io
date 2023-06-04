@@ -72,10 +72,10 @@
             <section class="whiteblock">
                 <section class="musicvideo_introduction">
                     <img src="images/photo_sd_mini.png" alt=""><br>
-                    3Dモデルを使ったミュージックビデオ映像を制作します。<br>
+                    3Dモデルを使ったミュージックビデオ映像や、Unity用のモーションを制作します。<br>
                     制作にはUnityを使用します。MMD専用のモデルやエフェクトなどは扱えませんのであしからず。<br>
-                    制作期間は内容によりますが2～3ヶ月程度となります。お手軽MVパックで依頼された場合は2週間～1ヶ月程度です。<br>
-                    金額は下の料金シミュレータで概算できます。 (多少上下することがあります)
+                    制作期間は内容によりますが2～3ヶ月程度となります。<br>
+                    金額は下の料金シミュレータで概算できます。 (内容により上下することがあります)
                     <div class="musicvideo_introduction banner">
                         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4XWqlc9V-LBvRst-fV_m2k9nwuwsO36QK4DZbRXKU624UvQ/viewform" target="_blank" rel="noopener noreferrer"><img src="images/banner/link_otoiawase.png" alt=""></a></p>
                     </div>
@@ -113,79 +113,83 @@
                             <td><h13>金額</h13></td>
                         </tr>
                         <tr>
-                            <th>制作方法*</th>
+                            <th>制作の種類*</th>
                             <td>
-                                <input type="radio" name="making" value="true" onchange="UpdatePrice()" checked="checked">通常<br>
-                                <input type="radio" name="making" onchange="UpdatePrice()" value="false">お手軽MVパック (￥30000- 固定)
+                                <input type="radio" name="making" value="true" onchange="UpdatePrice()" checked="checked">映像制作<br>
+                                <input type="radio" name="making" onchange="UpdatePrice()" value="false">モーション制作
                             </td>
                             <td><h13 id="price_1000">お尋ねください</h13></td>
                         </tr>
 
 
                         <tr>
-                            <th name="colorFlag">アバター調整</th>
-                            <td name="colorFlag"><input type="radio" name="avatar" value="10000" onchange="UpdatePrice()" checked="checked">必須 (￥10000-)</td>
-                            <td name="colorFlag"><h13 id="price_0">お尋ねください</h13></td>
+                            <th name="colorFlag_1">アバター調整</th>
+                            <td name="colorFlag_1"><input type="radio" name="avatar" value="10000" onchange="UpdatePrice()" checked="checked">必須 (￥10000-)</td>
+                            <td name="colorFlag_1"><h13 id="price_0">お尋ねください</h13></td>
                         </tr>
 
 
                         <tr>
-                            <th name="colorFlag">スカートなど物理演算</th>
-                            <td name="colorFlag">
+                            <th name="colorFlag_1">スカートなど物理演算</th>
+                            <td name="colorFlag_1">
                                 <input type="radio" name="physics" value="5000" onchange="UpdatePrice()" checked="checked">新規作成 (￥5000-)<br>
                                 <input type="radio" name="physics" onchange="UpdatePrice()" value="0">既存 (￥0-)
                             </td>
-                            <td name="colorFlag"><h13 id="price_1">お尋ねください</h13></td>
+                            <td name="colorFlag_1"><h13 id="price_1">お尋ねください</h13></td>
                         </tr>
                         <tr>
-                            <th name="colorFlag">身体モーション作成・修正</th>
-                            <td name="colorFlag">
+                            <th name="colorFlag_2">身体モーション作成・修正</th>
+                            <td name="colorFlag_2">
                                 <input type="radio" name="motion_body" value="30000" onchange="UpdatePrice()" checked="checked">新規作成 (￥30000-)<br>
-                                <input type="radio" name="motion_body" value="10000" onchange="UpdatePrice()">既存モーションの修正のみ (￥10000-)<br>
-                                <input type="radio" name="motion_body" value="0" onchange="UpdatePrice()">既存モーションそのまま (￥0-)
+                                <input type="radio" name="motion_body" value="10000" onchange="UpdatePrice()">モーション提出 & 修正 (￥10000-)<br>
+                                <input type="radio" name="motion_body" value="0" onchange="UpdatePrice()">モーション提出 & 修正なし (￥0-)
                             </td>
-                            <td name="colorFlag"><h13 id="price_2">お尋ねください</h13></td>
+                            <td name="colorFlag_2"><h13 id="price_2">お尋ねください</h13></td>
                         </tr>
                         <tr>
-                            <th name="colorFlag">指モーション作成・修正</th>
-                            <td name="colorFlag">
+                            <th name="colorFlag_2">指モーション作成・修正</th>
+                            <td name="colorFlag_2">
                                 <input type="radio" name="motion_finger" value="5000" onchange="UpdatePrice()" checked="checked">要 (￥5000-)<br>
                                 <input type="radio" name="motion_finger" value="0" onchange="UpdatePrice()">不要 (￥0-)
                             </td>
-                            <td name="colorFlag"><h13 id="price_4">お尋ねください</h13></td>
+                            <td name="colorFlag_2"><h13 id="price_4">お尋ねください</h13></td>
                         </tr>
                         <tr>
-                            <th name="colorFlag">表情・リップモーション作成</th>
-                            <td name="colorFlag">
+                            <th name="colorFlag_2">表情・リップモーション作成</th>
+                            <td name="colorFlag_2">
                                 <input type="radio" name="motion_facial" value="10000" onchange="UpdatePrice()" checked="checked">要 (￥10000-)<br>
                                 <input type="radio" name="motion_facial" value="0" onchange="UpdatePrice()">不要 (￥0-)
                             </td>
-                            <td name="colorFlag"><h13 id="price_5">お尋ねください</h13></td>
+                            <td name="colorFlag_2"><h13 id="price_5">お尋ねください</h13></td>
                         </tr>
+                        
+                        <!--
                         <tr>
-                            <th name="colorFlag">ビジュアル調整**</th>
-                            <td name="colorFlag">
+                            <th name="colorFlag_1">ビジュアル調整**</th>
+                            <td name="colorFlag_1">
                                 <input type="radio" name="visual" value="20000" onchange="UpdatePrice()">HDRP (￥20000-)<br>
                                 <input type="radio" name="visual" value="0" onchange="UpdatePrice()" checked="checked">Built-in (￥0-)
                             </td>
-                            <td name="colorFlag"><h13 id="price_6">お尋ねください</h13></td>
+                            <td name="colorFlag_1"><h13 id="price_6">お尋ねください</h13></td>
                         </tr>
+                        -->
+
                         <tr>
-                            <th name="colorFlag">歌詞入れ***</th>
-                            <td name="colorFlag">
-                                <input type="radio" name="lyrics" value="20000" onchange="UpdatePrice()">3Dタイポグラフィ (￥20000-)<br>
-                                <input type="radio" name="lyrics" value="10000" onchange="UpdatePrice()">簡易2D (￥10000-)<br>
-                                <input type="radio" name="lyrics" value="0" onchange="UpdatePrice()" checked="checked">なし (￥0-)
+                            <th name="colorFlag_1">背景3Dステージ**</th>
+                            <td name="colorFlag_1">
+                                <input type="radio" name="lyrics" value="0" onchange="UpdatePrice()" checked="checked">背景3D提出 (￥0-)<br>
+                                <input type="radio" name="lyrics" value="40000" onchange="UpdatePrice()">背景3D制作 (￥40000- ～ ￥80000-)<br>
+                                <input type="radio" name="lyrics" value="20000" onchange="UpdatePrice()">おまかせ (￥20000-)
                             </td>
-                            <td name="colorFlag"><h13 id="price_7">お尋ねください</h13></td>
+                            <td name="colorFlag_1"><h13 id="price_7">お尋ねください</h13></td>
                         </tr>
                         <tr>
-                            <th name="colorFlag">カメラワーク</th>
-                            <td name="colorFlag">
+                            <th name="colorFlag_1">カメラワーク</th>
+                            <td name="colorFlag_1">
                                 <input type="radio" name="motion_camera" value="20000" onchange="UpdatePrice()" checked="checked">要 (￥20000-)<br>
                                 <input type="radio" name="motion_camera" value="0" onchange="UpdatePrice()">不要 (￥0-) *360度動画やVRライブ作成の場合など
                             </td>
-                            <td name="colorFlag"><h13 id="price_8">お尋ねください</h13></td>
+                            <td name="colorFlag_1"><h13 id="price_8">お尋ねください</h13></td>
                         </tr>
 
 
@@ -207,9 +211,9 @@
                         for (var i = 0; i < making.length; i++) {
                             if (making[i].checked) {
                                 if (making[i].value == "true") {
-                                    price_1000.innerHTML = "-----";
+                                    price_1000.innerHTML = "映像制作";
                                 } else {
-                                    price_1000.innerHTML = "￥30000-";
+                                    price_1000.innerHTML = "モーション制作";
                                 }
                             }
                         }
@@ -268,16 +272,16 @@
                             }
                         }
 
-                        /*ビジュアル調整*/
+                        /*ビジュアル調整
                         var visual = document.getElementsByName("visual");
                         var price_6 = document.getElementById("price_6");
                         for (var i = 0; i < visual.length; i++) {
                             if (visual[i].checked) {
                                 price_6.innerHTML = "￥" + visual[i].value + "-";
                             }
-                        }
+                        }*/
 
-                        /*歌詞入れ*/
+                        /*背景3Dモデル*/
                         var lyrics = document.getElementsByName("lyrics");
                         var price_7 = document.getElementById("price_7");
                         for (var i = 0; i < lyrics.length; i++) {
@@ -297,56 +301,53 @@
 
                         /*見積り合計*/
                         var price_sum = document.getElementById("price_sum");
-                        var sum = parseInt(price_0.innerHTML.replace("￥", ""))
+                        var sum_1 = parseInt(price_0.innerHTML.replace("￥", ""))
                             + parseInt(price_1.innerHTML.replace("￥", ""))
                             + parseInt(price_2.innerHTML.replace("￥", ""))
                             /*  + parseInt(price_3.innerHTML.replace("￥", ""))  身体モーション作成(price_2)と統合したので不要 */
                             + parseInt(price_4.innerHTML.replace("￥", ""))
                             + parseInt(price_5.innerHTML.replace("￥", ""))
-                            + parseInt(price_6.innerHTML.replace("￥", ""))
+                            /*  + parseInt(price_6.innerHTML.replace("￥", "")) */
                             + parseInt(price_7.innerHTML.replace("￥", ""))
                             + parseInt(price_8.innerHTML.replace("￥", ""));
-                        if (price_1000.innerHTML == "-----") {
-                            price_sum.innerHTML = "￥" + String(sum) + "-";
-                        } else {
-                            price_sum.innerHTML = "￥30000-";
+
+                        var sum_2 = parseInt(price_2.innerHTML.replace("￥", ""))
+                            + parseInt(price_4.innerHTML.replace("￥", ""))
+                            + parseInt(price_5.innerHTML.replace("￥", ""));
+
+                        if (price_1000.innerHTML == "映像制作") {
+                            price_sum.innerHTML = "￥" + String(sum_1) + "-";
+                        } else if(price_1000.innerHTML == "モーション制作"){
+                            price_sum.innerHTML = "￥" + String(sum_2) + "-";
                         }
 
                         /*お手軽MVパックの場合に不要な行の色を変える/元に戻す*/
-                        var colorFlag = document.getElementsByName("colorFlag");
-                        if (price_1000.innerHTML == "-----") {
-                            colorFlag.forEach(element => element.classList.remove("disable"));
-                        } else {
-                            colorFlag.forEach(element => element.classList.add("disable"));
+                        var colorFlag_1 = document.getElementsByName("colorFlag_1");
+                        if (price_1000.innerHTML == "映像制作") {
+                            colorFlag_1.forEach(element => element.classList.remove("disable"));
+                        } else if(price_1000.innerHTML == "モーション制作") {
+                            colorFlag_1.forEach(element => element.classList.add("disable"));
                         }
                     }
                     UpdatePrice();</script>
 
                 <br>
                 <br>
-                    <h4>
-                        <strong class="color1"><font size="5">*お手軽MVパック</font></strong>　身体モーションやカメラワークが作成済みの楽曲を対象とした、納品が早く料金も安いプランです。<br>
-                        依頼ごとに多少アレンジはしますが、複数のマイナーチェンジのMVが世の中に存在することになります。<br>
-                        お手軽MVパックの意図については<a href="https://maron.fanbox.cc/posts/1893007" target="_blank" rel="noopener noreferrer">こちら</a>に詳しく書いていますのでご参考ください。<br>
-                        ※現在お手軽MVパックは現在受け付け停止中です、再開をお待ちください(from 2021/8/25)
+                     <div class="list">
+                   <h4>
+                        <strong class="color1"><font size="5">*制作の種類</font></strong><br>
+                        映像制作では、主にミュージックビデオ映像を制作します。<br>
+                        キャラクターは1体を想定していますが、複数体が動く映像も制作可能です。(金額は要相談)<br>
+                        モーション制作では、モーションキャプチャ技術を使い、Unity用のダンスモーションの制作をします。<br>
                     </h4>
-                    <br>
-                    <!--<h4>『好き！雪！本気マジック』<a href="https://youtu.be/gZm6aSamgfg" target="_blank" rel="noopener noreferrer">サンプル動画 (YouTubeへ飛びます)</a>-->
-                    <br>
+                     </div>
+                   <br>
                     <br>
                     <div class="list">
-                        <h4><strong class="color1"><font size="5">**ビジュアル調整</font></strong>　HDRPとBuilt-inの2種類の質感を選べます。HDRPの方がより高度なレンダリングです。</h4>
-                        <div class="inner">
-                            <h12><img src="images/musicvideo/musicvideo_hdrp.png" alt=""></h12>
-                            <h12><img src="images/musicvideo/musicvideo_srp.png" alt=""></h12>
-                        </div>
+                        <h4><strong class="color1"><font size="5">**背景3Dステージ</font></strong><br>
+                        販売されている有料3Dモデルを指定する場合は、購入料金の上乗せが必要になります。<br>
+                        おまかせの場合は、手持ちの3Dモデルや無料のアセットから見繕います。</h4>
                         <br>
-                        <br>
-                        <h4><strong class="color1"><font size="5">***歌詞入れ</font></strong>　3Dタイポグラフィでは3Dの文字が動きます。簡易2Dでは画面下に歌詞を表示します。</h4>
-                        <div class="inner">
-                            <h12><img src="images/musicvideo/musicvideo_lyrics3d.png" alt=""></h12>
-                            <h12><img src="images/musicvideo/musicvideo_lyrics2d.png" alt=""></h12>
-                        </div>
                     </div>
 
 
