@@ -111,7 +111,7 @@
   </div>
 
   <div id="unity-container" class="unity-desktop" style="visibility: hidden; position: absolute; z-index: -100;">
-    <canvas id="unity-canvas" width=1080 height=1920 matchWebGLToCanvasSize=false></canvas>
+    <canvas id="unity-canvas" width=1080 height=1920></canvas>
     <div id="unity-loading-bar">
       <div id="unity-logo"></div>
       <div id="unity-progress-bar-empty">
@@ -171,6 +171,7 @@
 
     canvas.style.width = "1080px";
     canvas.style.height = "1920px";
+    matchWebGLToCanvasSize = false;
 
 
     loadingBar.style.display = "block";
