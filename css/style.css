@@ -25,7 +25,7 @@ body {
 	background: #f7f4f0; /*背景色*/
 	-webkit-text-size-adjust: none;
 }
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
+h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
 ul {list-style-type: none;}
 ol {padding-left: 40px;padding-bottom: 15px;}
 img {
@@ -132,6 +132,9 @@ header #logo img {
 }
 #contents h4 {
 	text-align: center
+}
+#contents h6 {
+	text-align: left
 }
 
 /*コンテンツ内にあるp(段落)タグ設定*/
@@ -328,6 +331,10 @@ header #logo img {
 	.list h4 {
 		font-size: 140%; /*文字サイズ*/
 	}
+	/*h6タグ*/
+	.list h6 {
+		font-size: 140%; /*文字サイズ*/
+	}
 	/*h4タグ（サムネイルタイプへの追加指定）*/
 	.list.thumb h4 {
 		font-size: 100%; /*文字サイズ*/
@@ -440,7 +447,7 @@ footer .pr {display: block;}
 	padding: 20px 40px; /*上下、左右へのボックス内の余白*/
 	border-radius: 30px; /*角丸のサイズ。この１行を削除すると、通常の長方形になります。*/
 	margin-bottom: 30px; /*次の領域との間に空けるスペース*/
-	background: #fff; /*背景色*/
+	background: #fbfbfb; /*背景色*/
 }
 .box1 {
 	overflow: hidden;position: relative;
