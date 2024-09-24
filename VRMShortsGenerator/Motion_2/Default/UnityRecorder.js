@@ -184,7 +184,7 @@ function prepareRecorder() {
             let code = mp4AVC1Codecs[i];
             if (MediaRecorder.isTypeSupported(code)) {
                 recorder = new MediaRecorder(stream, { mimeType: code, videoBitsPerSecond: 16384000 });
-                isConvertOk = false;
+                isConvertOk = true;
                 break;
             }
         }
@@ -277,6 +277,7 @@ window.startRecord = function () {
 
             try {
 
+                console.log("here")
                 // mp4変換作業
                 const { createFFmpeg, fetchFile } = FFmpeg;
                 const ffmpeg = createFFmpeg({ log: true });
@@ -304,6 +305,7 @@ window.startRecord = function () {
             catch {
 
                 // webmにフォールバックする
+                console.log("fall")
 
             }
 
